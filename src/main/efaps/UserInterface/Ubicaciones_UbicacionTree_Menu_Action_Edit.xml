@@ -2,7 +2,7 @@
 
 <!--
 
- Copyright 2003 - 2011 The eFaps Team
+ Copyright 2003 - 2009 The eFaps Team
 
  Licensed under the Apache License, Version 2.0 (the "License");
  you may not use this file except in compliance with the License.
@@ -23,16 +23,27 @@
 
 -->
 
-<datamodel-type  xmlns="http://www.efaps.org/xsd"
-                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                 xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
-    <uuid>50489fb2-c255-4de8-9f6f-d2537c9ed488</uuid>
+<ui-command xmlns="http://www.efaps.org/xsd"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
+
+    <uuid>bd046755-6c6f-410a-b1e4-a180560744c3</uuid>
     <file-application>eFapsLocalizations-Ubicaciones</file-application>
     <file-revision>$Rev$</file-revision>
 
     <definition>
         <version-expression>(version==latest)</version-expression>
-        <name>Ubicaciones_UbicacionStandard</name>
-        <parent>Ubicaciones_UbicacionAbstract</parent>
-  </definition>
-</datamodel-type>
+        <name>Ubicaciones_UbicacionTree_Menu_Action_Edit</name>
+
+        <!-- target definitions -->
+        <target>
+            <form>Ubicaciones_UbicacionAbstractForm</form>
+            <execute program="org.efaps.esjp.common.uiform.Edit" />
+        </target>
+        <!-- properties -->
+        <property name="Target">modal</property>
+        <property name="TargetMode">edit</property>
+        <property name="WindowHeight">460</property>
+        <property name="WindowWidth">515</property>
+    </definition>
+</ui-command>

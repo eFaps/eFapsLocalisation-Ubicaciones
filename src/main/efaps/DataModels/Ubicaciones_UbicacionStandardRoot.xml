@@ -26,13 +26,13 @@
 <datamodel-type  xmlns="http://www.efaps.org/xsd"
                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                  xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
-    <uuid>50489fb2-c255-4de8-9f6f-d2537c9ed488</uuid>
+    <uuid>6f85a09a-7e68-44a1-9fef-74dfc28f4d59</uuid>
     <file-application>eFapsLocalizations-Ubicaciones</file-application>
     <file-revision>$Rev$</file-revision>
 
     <definition>
         <version-expression>(version==latest)</version-expression>
-        <name>Ubicaciones_UbicacionStandard</name>
-        <parent>Ubicaciones_UbicacionAbstract</parent>
+        <name>Ubicaciones_UbicacionStandardRoot</name>
+        <parent>Ubicaciones_UbicacionStandard</parent>
   </definition>
 </datamodel-type>

@@ -23,16 +23,21 @@
 
 -->
 
-<datamodel-type  xmlns="http://www.efaps.org/xsd"
-                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                 xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
-    <uuid>50489fb2-c255-4de8-9f6f-d2537c9ed488</uuid>
+<ui-menu xmlns="http://www.efaps.org/xsd"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
+
+    <uuid>6a7b1672-a82c-48ad-93d4-fa3a392702aa</uuid>
     <file-application>eFapsLocalizations-Ubicaciones</file-application>
     <file-revision>$Rev$</file-revision>
 
     <definition>
         <version-expression>(version==latest)</version-expression>
-        <name>Ubicaciones_UbicacionStandard</name>
-        <parent>Ubicaciones_UbicacionAbstract</parent>
-  </definition>
-</datamodel-type>
+        <name>Ubicaciones_UbicacionMyDesk_Menu_Action</name>
+        <!-- childs -->
+        <childs>
+            <child>Ubicaciones_UbicacionMyDesk_Menu_Action_Create</child>
+            <child>Ubicaciones_UbicacionMyDesk_Menu_Action_Delete</child>
+        </childs>
+    </definition>
+</ui-menu>

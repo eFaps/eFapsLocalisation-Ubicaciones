@@ -23,16 +23,29 @@
 
 -->
 
-<datamodel-type  xmlns="http://www.efaps.org/xsd"
-                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                 xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
-    <uuid>50489fb2-c255-4de8-9f6f-d2537c9ed488</uuid>
+<ui-command xmlns="http://www.efaps.org/xsd"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
+
+    <uuid>b1a580bd-c4a3-4d06-9b98-2e3b62e06254</uuid>
     <file-application>eFapsLocalizations-Ubicaciones</file-application>
     <file-revision>$Rev$</file-revision>
-
     <definition>
         <version-expression>(version==latest)</version-expression>
-        <name>Ubicaciones_UbicacionStandard</name>
-        <parent>Ubicaciones_UbicacionAbstract</parent>
-  </definition>
-</datamodel-type>
+        <name>Ubicaciones_UbicacionMyDesk</name>
+        <access>
+            <role>Contacts_Admin</role>
+        </access>
+
+        <target>
+            <menu>Ubicaciones_UbicacionMyDesk_Menu</menu>
+            <table>Ubicaciones_UbicacionAbstractTable</table>
+            <evaluate program="org.efaps.esjp.common.uitable.MultiPrint">
+                <property name="Types">Ubicaciones_UbicacionStandardRoot</property>
+            </evaluate>
+        </target>
+        <!-- properties -->
+        <property name="Target">content</property>
+        <property name="TargetShowCheckBoxes">true</property>
+    </definition>
+</ui-command>

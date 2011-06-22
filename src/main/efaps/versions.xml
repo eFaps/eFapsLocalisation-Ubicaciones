@@ -49,7 +49,24 @@
     <version number="1" login="true" reloadCache="true">
         <description>Install Data Model and UI.</description>
         <script type="groovy">
+            import org.efaps.admin.runlevel.RunLevel;
+            import org.efaps.db.Context;
+            import org.efaps.db.SearchQuery;
+            import org.efaps.esjp.admin.ui.UIUpdate;
+            import org.efaps.importer.DataImport;
 
+            import java.net.URL
+            import java.io.File;
+
+            EFAPS_LOGGER.info("Importing Data for eFapsLocalizations Basic Modul;");
+
+            RunLevel.init("shell");
+            RunLevel.execute();
+
+            UIUpdate update = new UIUpdate();
+
+             <!-- Ubicaciones_UbicacionMyDesk , ERP_AttributeAbstractMyDesk -->
+            update.add2Menu("b1a580bd-c4a3-4d06-9b98-2e3b62e06254", "9427d507-4793-4751-83e8-f08dbf2df55d", 1);
         </script>
     </version>
 </install>
