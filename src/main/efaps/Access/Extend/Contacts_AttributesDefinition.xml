@@ -42,7 +42,8 @@
         <type>Contacts_AttributeDefinitionPhone</type>
         <type>Contacts_AttributeDefinitionAbstract</type>
         <type>Contacts_AttributeDefinitionFax</type>
-        <type>Ubicaciones_UbicacionStandart</type>
+        <type>Ubicaciones_UbicacionAbstract</type>
+        <type>Ubicaciones_UbicacionStandard</type>
 
         <role>Contacts_Modifier</role>
         <role>Contacts_Reader</role>

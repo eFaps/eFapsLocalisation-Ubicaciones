@@ -32,7 +32,10 @@
 
     <definition>
         <version-expression>(version==latest)</version-expression>
-        <name>Ubicaciones_UbicacionStandart</name>
+        <name>Ubicaciones_UbicacionStandard</name>
         <parent>Ubicaciones_UbicacionAbstract</parent>
+        <trigger program="org.efaps.esjp.admin.access.SimpleAccessCheckOnType"
+             name="Ubicaciones_UbicacionStandard.ACCESSCHECK"
+             event="ACCESSCHECK"/>
   </definition>
 </datamodel-type>
