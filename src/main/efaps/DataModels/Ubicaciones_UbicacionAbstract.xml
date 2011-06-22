@@ -34,6 +34,7 @@
 
         <version-expression>(version==latest)</version-expression>
         <name>Ubicaciones_UbicacionAbstract</name>
+        <purpose abstract="true"/>
         <attribute>
           <name>Type</name>
           <type>Type</type>
