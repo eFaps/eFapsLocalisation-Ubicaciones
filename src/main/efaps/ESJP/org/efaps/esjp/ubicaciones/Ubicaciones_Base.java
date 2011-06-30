@@ -116,17 +116,14 @@ public abstract class Ubicaciones_Base
                 final Map<?, ?> props = (Map<?, ?>) _parameter.get(ParameterValues.PROPERTIES);
                 final String parentAttr = (String) props.get("ParentAttribute");
 
-                final FieldValue fieldValue = (FieldValue) _parameter.get(ParameterValues.UIOBJECT);
-                if (fieldValue != null) {
-                    final Instance instance = _parameter.getCallInstance();
-                    if (parentAttr != null && !"".equals(parentAttr)) {
-                        final PrintQuery print = new PrintQuery(instance);
-                        final SelectBuilder selID = new SelectBuilder().linkto(parentAttr).attribute("ID");
-                        print.addSelect(selID);
-                        if (print.execute()) {
-                            final Long id = print.<Long>getSelect(selID);
-                            _queryBldr.addWhereAttrEqValue(CIUbicaciones.UbicacionAbstract.ParentLink, id);
-                        }
+                final Instance instance = _parameter.getCallInstance();
+                if (parentAttr != null && !"".equals(parentAttr)) {
+                    final PrintQuery print = new PrintQuery(instance);
+                    final SelectBuilder selID = new SelectBuilder().linkto(parentAttr).attribute("ID");
+                    print.addSelect(selID);
+                    if (print.execute()) {
+                        final Long id = print.<Long>getSelect(selID);
+                        _queryBldr.addWhereAttrEqValue(CIUbicaciones.UbicacionAbstract.ParentLink, id);
                     }
                 }
             }
