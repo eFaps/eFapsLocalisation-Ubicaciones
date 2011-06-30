@@ -26,6 +26,7 @@ import java.util.List;
 import java.util.Map;
 
 import org.apache.commons.lang.StringEscapeUtils;
+import org.efaps.admin.datamodel.ui.FieldValue;
 import org.efaps.admin.event.Parameter;
 import org.efaps.admin.event.Parameter.ParameterValues;
 import org.efaps.admin.event.Return;
@@ -33,8 +34,11 @@ import org.efaps.admin.event.Return.ReturnValues;
 import org.efaps.admin.program.esjp.EFapsRevision;
 import org.efaps.admin.program.esjp.EFapsUUID;
 import org.efaps.admin.ui.field.Field;
+import org.efaps.db.Instance;
 import org.efaps.db.MultiPrintQuery;
+import org.efaps.db.PrintQuery;
 import org.efaps.db.QueryBuilder;
+import org.efaps.db.SelectBuilder;
 import org.efaps.esjp.ci.CIUbicaciones;
 import org.efaps.ui.wicket.util.EFapsKey;
 import org.efaps.util.EFapsException;
@@ -98,4 +102,63 @@ public abstract class Ubicaciones_Base
         ret.put(ReturnValues.VALUES, list);
         return ret;
     }
+
+    public Return getDropdown(final Parameter _parameter)
+        throws EFapsException
+    {
+        final org.efaps.esjp.common.uiform.Field field = new org.efaps.esjp.common.uiform.Field() {
+
+            @Override
+            protected void add2QueryBuilder4List(final Parameter _parameter,
+                                                 final QueryBuilder _queryBldr)
+                throws EFapsException
+            {
+                final Map<?, ?> props = (Map<?, ?>) _parameter.get(ParameterValues.PROPERTIES);
+                final String parentAttr = (String) props.get("ParentAttribute");
+
+                final FieldValue fieldValue = (FieldValue) _parameter.get(ParameterValues.UIOBJECT);
+                if (fieldValue != null) {
+                    final Instance instance = _parameter.getCallInstance();
+                    if (parentAttr != null && !"".equals(parentAttr)) {
+                        final PrintQuery print = new PrintQuery(instance);
+                        final SelectBuilder selID = new SelectBuilder().linkto(parentAttr).attribute("ID");
+                        print.addSelect(selID);
+                        if (print.execute()) {
+                            final Long id = print.<Long>getSelect(selID);
+                            _queryBldr.addWhereAttrEqValue(CIUbicaciones.UbicacionAbstract.ParentLink, id);
+                        }
+                    }
+                }
+            }
+
+            @Override
+            protected DropDownPosition getDropDownPosition(final Parameter _parameter,
+                                                           final Object _value,
+                                                           final Object _option)
+                throws EFapsException
+            {
+                final DropDownPosition ret = super.getDropDownPosition(_parameter, _value, _option);
+
+                final FieldValue fieldValue = (FieldValue) _parameter.get(ParameterValues.UIOBJECT);
+                final Instance instance = _parameter.getCallInstance();
+                if (fieldValue != null) {
+                    final PrintQuery print = new PrintQuery(instance);
+                    final SelectBuilder selID = new SelectBuilder()
+                                                        .linkto(fieldValue.getAttribute().getName()).attribute("ID");
+                    print.addSelect(selID);
+                    if (print.execute()) {
+                        final Long id = print.<Long>getSelect(selID);
+                        if (id.equals(_value)) {
+                            ret.setSelected(true);
+                        }
+                    }
+                }
+
+                return ret;
+            }
+        };
+
+        return field.dropDownFieldValue(_parameter);
+    }
+
 }

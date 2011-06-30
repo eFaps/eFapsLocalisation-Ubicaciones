@@ -116,7 +116,7 @@
                 <property name="Type">Ubicaciones_UbicacionStandard</property>
                 <property name="Select">attribute[Name]</property>
                 <property name="OrderSelect">attribute[Name]</property>
-                <property name="Parent">locationUbicationEdit</property>
+                <property name="ParentAttribute">DepartmentLink</property>
             </trigger>
             <trigger program="org.efaps.esjp.ubicaciones.Ubicaciones" method="updateDropDown4Ubication"
                 name="Contacts_ClassLocationForm.locationUbication2.UI_FIELD_UPDATE" event="UI_FIELD_UPDATE">
@@ -134,7 +134,7 @@
                 <property name="Type">Ubicaciones_UbicacionStandard</property>
                 <property name="Select">attribute[Name]</property>
                 <property name="OrderSelect">attribute[Name]</property>
-                <property name="Parent">locationUbication2Edit</property>
+                <property name="ParentAttribute">ProvinceLink</property>
             </trigger>
             <trigger program="org.efaps.esjp.ubicaciones.Ubicaciones" method="updateDropDown4Ubication"
                 name="Ubicaciones_UbicacionExampleForm.locationUbication3Edit.UI_FIELD_UPDATE" event="UI_FIELD_UPDATE">
