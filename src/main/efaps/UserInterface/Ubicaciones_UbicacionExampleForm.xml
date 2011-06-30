@@ -36,8 +36,9 @@
         <!-- fields -->
         <field name="locationUbication">
             <property name="ModeCreate">EDITABLE</property>
-            <property name="ModeEdit">EDITABLE</property>
+            <property name="ModeEdit">NONE</property>
             <property name="ModeView">NONE</property>
+            <property name="Attribute">DepartmentLink</property>
             <property name="Label">Ubicaciones_UbicacionExampleForm.locationUbication.Label</property>
             <trigger program="org.efaps.esjp.common.uiform.Field" method="dropDownFieldValue"
                 name="Ubicaciones_UbicacionExampleForm.locationUbication.UI_FIELD_VALUE" event="UI_FIELD_VALUE">
@@ -53,8 +54,9 @@
         </field>
         <field name="locationUbication2">
             <property name="ModeCreate">EDITABLE</property>
-            <property name="ModeEdit">EDITABLE</property>
+            <property name="ModeEdit">NONE</property>
             <property name="ModeView">NONE</property>
+            <property name="Attribute">ProvinceLink</property>
             <property name="Label">Ubicaciones_UbicacionExampleForm.locationUbication2.Label</property>
             <trigger program="org.efaps.esjp.common.uiform.Field" method="dropDownFieldValue"
                 name="Ubicaciones_UbicacionExampleForm.locationUbication2.UI_FIELD_VALUE" event="UI_FIELD_VALUE">
@@ -70,8 +72,9 @@
         </field>
         <field name="locationUbication3">
             <property name="ModeCreate">EDITABLE</property>
-            <property name="ModeEdit">EDITABLE</property>
+            <property name="ModeEdit">NONE</property>
             <property name="ModeView">NONE</property>
+            <property name="Attribute">DistrictLink</property>
             <property name="Label">Ubicaciones_UbicacionExampleForm.locationUbication3.Label</property>
             <trigger program="org.efaps.esjp.common.uiform.Field" method="dropDownFieldValue"
                 name="Ubicaciones_UbicacionExampleForm.locationUbication3.UI_FIELD_VALUE" event="UI_FIELD_VALUE">
@@ -83,6 +86,67 @@
             <trigger program="org.efaps.esjp.ubicaciones.Ubicaciones" method="updateDropDown4Ubication"
                 name="Ubicaciones_UbicacionExampleForm.locationUbication3.UI_FIELD_UPDATE" event="UI_FIELD_UPDATE">
             </trigger>
+        </field>
+        <field name="locationUbicationEdit">
+            <property name="ModeCreate">NONE</property>
+            <property name="ModeEdit">EDITABLE</property>
+            <property name="ModeView">NONE</property>
+            <property name="Attribute">DepartmentLink</property>
+            <property name="Label">Ubicaciones_UbicacionExampleForm.locationUbication.Label</property>
+            <trigger program="org.efaps.esjp.ubicaciones.Ubicaciones" method="getDropdown"
+                name="Ubicaciones_UbicacionExampleForm.locationUbicationEdit.UI_FIELD_VALUE" event="UI_FIELD_VALUE">
+                <property name="Type">Ubicaciones_UbicacionStandardRoot</property>
+                <property name="Select">attribute[Name]</property>
+                <property name="OrderSelect">attribute[Name]</property>
+            </trigger>
+            <trigger program="org.efaps.esjp.ubicaciones.Ubicaciones" method="updateDropDown4Ubication"
+                name="Ubicaciones_UbicacionExampleForm.locationUbicationEdit.UI_FIELD_UPDATE" event="UI_FIELD_UPDATE">
+                <property name="targetField">locationUbication2Edit</property>
+                <property name="cleanFields">locationUbication3Edit</property>
+            </trigger>
+        </field>
+        <field name="locationUbication2Edit">
+            <property name="ModeCreate">NONE</property>
+            <property name="ModeEdit">EDITABLE</property>
+            <property name="ModeView">NONE</property>
+            <property name="Attribute">ProvinceLink</property>
+            <property name="Label">Ubicaciones_UbicacionExampleForm.locationUbication2.Label</property>
+            <trigger program="org.efaps.esjp.ubicaciones.Ubicaciones" method="getDropdown"
+                name="Ubicaciones_UbicacionExampleForm.locationUbication2Edit.UI_FIELD_VALUE" event="UI_FIELD_VALUE">
+                <property name="Type">Ubicaciones_UbicacionStandard</property>
+                <property name="Select">attribute[Name]</property>
+                <property name="OrderSelect">attribute[Name]</property>
+                <property name="Parent">locationUbicationEdit</property>
+            </trigger>
+            <trigger program="org.efaps.esjp.ubicaciones.Ubicaciones" method="updateDropDown4Ubication"
+                name="Contacts_ClassLocationForm.locationUbication2.UI_FIELD_UPDATE" event="UI_FIELD_UPDATE">
+                <property name="targetField">locationUbication3Edit</property>
+            </trigger>
+        </field>
+        <field name="locationUbication3Edit">
+            <property name="ModeCreate">NONE</property>
+            <property name="ModeEdit">EDITABLE</property>
+            <property name="ModeView">NONE</property>
+            <property name="Attribute">DistrictLink</property>
+            <property name="Label">Ubicaciones_UbicacionExampleForm.locationUbication3.Label</property>
+            <trigger program="org.efaps.esjp.ubicaciones.Ubicaciones" method="getDropdown"
+                name="Ubicaciones_UbicacionExampleForm.locationUbication3Edit.UI_FIELD_VALUE" event="UI_FIELD_VALUE">
+                <property name="Type">Ubicaciones_UbicacionStandard</property>
+                <property name="Select">attribute[Name]</property>
+                <property name="OrderSelect">attribute[Name]</property>
+                <property name="Parent">locationUbication2Edit</property>
+            </trigger>
+            <trigger program="org.efaps.esjp.ubicaciones.Ubicaciones" method="updateDropDown4Ubication"
+                name="Ubicaciones_UbicacionExampleForm.locationUbication3Edit.UI_FIELD_UPDATE" event="UI_FIELD_UPDATE">
+            </trigger>
+        </field>
+        <field name="ubication">
+            <property name="Phrase">$&lt;linkto[DepartmentLink].attribute[Name]&gt; - $&lt;linkto[ProvinceLink].attribute[Name]&gt; - $&lt;linkto[DistrictLink].attribute[Name]&gt;</property>
+            <property name="ClassNameUI">org.efaps.admin.datamodel.ui.StringUI</property>
+            <property name="Label">Ubicaciones_UbicacionExampleForm.ubication.Label</property>
+            <property name="ModeCreate">NONE</property>
+            <property name="ModeEdit">NONE</property>
+            <property name="ModeView">READONLY</property>
         </field>
     </definition>
 </ui-form>
