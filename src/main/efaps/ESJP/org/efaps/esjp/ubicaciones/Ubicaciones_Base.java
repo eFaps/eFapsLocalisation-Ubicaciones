@@ -70,7 +70,9 @@ public abstract class Ubicaciones_Base
         final Long id = Long.parseLong(_parameter.getParameterValue(field.getName()));
         final QueryBuilder queryBldr = new QueryBuilder(CIUbicaciones.UbicacionStandard);
         queryBldr.addWhereAttrEqValue(CIUbicaciones.UbicacionStandard.ParentLink, id);
+        queryBldr.addOrderByAttributeAsc(CIUbicaciones.UbicacionStandard.Name);
         final MultiPrintQuery multi = queryBldr.getPrint();
+        multi.setEnforceSorted(true);
         multi.addAttribute(CIUbicaciones.UbicacionStandard.Name);
         multi.execute();
         final StringBuilder js = new StringBuilder();
