@@ -60,8 +60,19 @@
 
             EFAPS_LOGGER.info("Importing Data for eFapsLocalizations Basic Modul;");
 
-            RunLevel.init("shell");
-            RunLevel.execute();
+            SearchQuery query = new SearchQuery();
+            query.setQueryTypes("Ubicaciones_UbicacionStandardRoot");
+            query.addWhereExprEqValue("Name", "Lima");
+            query.addSelect("OID");
+            query.execute();
+            if (!query.next()) {
+                RunLevel.init("shell");
+                RunLevel.execute();
+
+                URL url1 = new URL(EFAPS_ROOTURL, "Data/IMPORT_Lima.xml");
+                DataImport imp1 = DataImport.readFile(url1);
+                imp1.updateInDB();
+            }
 
             UIUpdate update = new UIUpdate();
 
