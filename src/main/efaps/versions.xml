@@ -155,6 +155,16 @@
                 DataImport imp1 = DataImport.readFile(url1);
                 imp1.updateInDB();
             }
+            SearchQuery query10 = new SearchQuery();
+            query10.setQueryTypes("Ubicaciones_UbicacionStandardRoot");
+            query10.addWhereExprEqValue("Name", "Huancavelica");
+            query10.addSelect("OID");
+            query10.execute();
+            if (!query10.next()) {
+                URL url1 = new URL(EFAPS_ROOTURL, "Data/Huancavelica.xml");
+                DataImport imp1 = DataImport.readFile(url1);
+                imp1.updateInDB();
+            }
 
 
         </script>

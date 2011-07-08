@@ -1,0 +1,765 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+  Copyright 2011 moxter.net S.A.C.
+
+  All Rights Reserved.
+  This program contains proprietary and trade secret information of
+  moxter.net S.A.C. Copyright notice is precautionary only and does not
+  evidence any actual or intended publication of such program.
+
+  Author:          moxter.net S.A.C.
+  Revision:        $Rev: 310 $
+  Last Changed:    $Date: 2011-07-04 14:39:39 -0500 (lun, 04 jul 2011) $
+  Last Changed By: $Author: Jorge Cueva $
+
+-->
+
+<import xmlns="http://www.efaps.org/xsd"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
+    <object type="Ubicaciones_UbicacionStandardRoot">
+        <attribute name="Name">Ancash</attribute>
+        <object type="Ubicaciones_UbicacionStandard">
+            <parentattribute name="ParentLink"/>
+            <attribute name="Name">Huaraz</attribute>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Huaraz</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Cochabamba</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Colcabamba</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Huanchay</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Independencia</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Jangas</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">La Libertad</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Olleros</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Pampas</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Pariacoto</attribute>
+            </object>
+             <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Pira</attribute>
+            </object>
+             <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Tarica</attribute>
+            </object>
+        </object>
+        <object type="Ubicaciones_UbicacionStandard">
+            <parentattribute name="ParentLink"/>
+            <attribute name="Name">Aija</attribute>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Aija</attribute>
+            </object>
+             <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Coris</attribute>
+            </object>
+             <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Huacllan</attribute>
+            </object>
+             <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">La Merced</attribute>
+            </object>
+             <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Succha</attribute>
+            </object>
+        </object>
+        <object type="Ubicaciones_UbicacionStandard">
+            <parentattribute name="ParentLink"/>
+            <attribute name="Name">Antonio Raymondi</attribute>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Llamellin</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Aczo</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Chaccho</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Chingas</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Mirgas</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">San Juan De Rontoy</attribute>
+            </object>
+        </object>
+        <object type="Ubicaciones_UbicacionStandard">
+            <parentattribute name="ParentLink"/>
+            <attribute name="Name">Asunción</attribute>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Chacas</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Acochaca</attribute>
+            </object>
+        </object>
+        <object type="Ubicaciones_UbicacionStandard">
+            <parentattribute name="ParentLink"/>
+            <attribute name="Name">Bolognesi</attribute>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Cchiquian</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Abelardo Pardo Lezameta</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Antonio Raymondi</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Aquia</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Cajacay</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Canis</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Colquioc</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Huallanca</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Huasta</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Huayllacayan</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">La Primavera</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Mangas</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Pacllon</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">San Miguel De Corpanqui</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Ticllos</attribute>
+            </object>
+        </object>
+        <object type="Ubicaciones_UbicacionStandard">
+            <parentattribute name="ParentLink"/>
+            <attribute name="Name">Carhuaz</attribute>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Carhuaz</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Acopampa</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Amashca</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Anta</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Ataquero</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Marcara</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Parihuanca</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">San Miguel De Aco</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Shilla</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Tinco</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Yungar</attribute>
+            </object>
+       </object>
+       <object type="Ubicaciones_UbicacionStandard">
+            <parentattribute name="ParentLink"/>
+            <attribute name="Name">Carlos Fermin Fitzcarrald</attribute>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">San Luis</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">San Nicolas</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Yauya</attribute>
+            </object>
+        </object>
+        <object type="Ubicaciones_UbicacionStandard">
+            <parentattribute name="ParentLink"/>
+            <attribute name="Name">Casma</attribute>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Casma</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Buena Vista Alta</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Comandante Noel</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Yautan</attribute>
+            </object>
+        </object>
+        <object type="Ubicaciones_UbicacionStandard">
+            <parentattribute name="ParentLink"/>
+            <attribute name="Name">Corongo</attribute>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Corongo</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Aco</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Bambas</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Cusca</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Pampa</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Yanac</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Yupan</attribute>
+            </object>
+        </object>
+        <object type="Ubicaciones_UbicacionStandard">
+            <parentattribute name="ParentLink"/>
+            <attribute name="Name">Huari</attribute>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Huari</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Anra</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Cajay</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Chavin De Huantar</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Huacachi</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Huacchis</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Huachis</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Huantar</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Masin</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Paucas</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Ponto</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Rahuapampa</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Rapayan</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">San Marcos</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">San Pedro De Chana</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Uco</attribute>
+            </object>
+        </object>
+        <object type="Ubicaciones_UbicacionStandard">
+            <parentattribute name="ParentLink"/>
+            <attribute name="Name">Huarmey</attribute>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Huarmey</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Cochapeti</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Culebras</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Huayan</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Malvas</attribute>
+            </object>
+        </object>
+        <object type="Ubicaciones_UbicacionStandard">
+            <parentattribute name="ParentLink"/>
+            <attribute name="Name">Huaylas</attribute>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Caraz</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Huallanca</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Huata</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Huaylas</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Mato</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Pamparomas</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Pueblo Libre</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Santa Cruz</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Santo Toribio</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Yuracmarca</attribute>
+            </object>
+        </object>
+        <object type="Ubicaciones_UbicacionStandard">
+            <parentattribute name="ParentLink"/>
+            <attribute name="Name">Mariscal Luzuriaga</attribute>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Piscobamba</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Casca</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Eleazar Guzman Barron</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Fidel Olivas Escudero</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Llama</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Llumpia</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Lucma</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Musga</attribute>
+            </object>
+        </object>
+        <object type="Ubicaciones_UbicacionStandard">
+            <parentattribute name="ParentLink"/>
+            <attribute name="Name">Ocros</attribute>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Ocros</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Acas</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Cajamarquilla</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Carhuapampa</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Cochas</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Congas</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Llipa</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">San Cristobal De Rajan</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">San Pedro</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Santiago De Chilcas</attribute>
+            </object>
+        </object>
+        <object type="Ubicaciones_UbicacionStandard">
+            <parentattribute name="ParentLink"/>
+            <attribute name="Name">Pallasca</attribute>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Cabana</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Bolognesi</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Conchucos</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Huacaschuque</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Huandoval</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Lacabamba</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Llapo</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Pallasca</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Pampas</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Tauca</attribute>
+            </object>
+        </object>
+        <object type="Ubicaciones_UbicacionStandard">
+            <parentattribute name="ParentLink"/>
+            <attribute name="Name">Pomabamba</attribute>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Pomabamba</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Huayllan</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Parobamba</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Quinuabamba</attribute>
+            </object>
+        </object>
+        <object type="Ubicaciones_UbicacionStandard">
+            <parentattribute name="ParentLink"/>
+            <attribute name="Name">Recuay</attribute>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Recuay</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Catac</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Cotaparaco</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Huayllapampa</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Llacllin</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Marca</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Pampas Chico</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Pararin</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Tapacocha</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Ticapampa</attribute>
+            </object>
+        </object>
+        <object type="Ubicaciones_UbicacionStandard">
+            <parentattribute name="ParentLink"/>
+            <attribute name="Name">Santa</attribute>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Chimbote</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Caceres Del Perú</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Coishco</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Macate</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Moro</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Nepeña</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Samanco</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Santa</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Nuevo Chimbote</attribute>
+            </object>
+        </object>
+        <object type="Ubicaciones_UbicacionStandard">
+            <parentattribute name="ParentLink"/>
+            <attribute name="Name">Sihuas</attribute>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Sihuas</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Acobamba</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Alfonso Ugarte</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Cashapampa</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Chingalpo</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Huayllabamba</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Quiches</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Ragash</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">San Juan</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Sicsibamba</attribute>
+            </object>
+        </object>
+        <object type="Ubicaciones_UbicacionStandard">
+            <parentattribute name="ParentLink"/>
+            <attribute name="Name">Yungay</attribute>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Yungay</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Cascapara</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Mancos</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Matacoto</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Quillo</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Ranrahirca</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Shupluy</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Yanama</attribute>
+            </object>
+        </object>
+
+    </object>
+</import>
