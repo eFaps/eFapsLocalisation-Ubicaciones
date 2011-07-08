@@ -58,7 +58,10 @@
             import java.net.URL
             import java.io.File;
 
-            EFAPS_LOGGER.info("Importing Data for eFapsLocalizations Basic Modul;");
+            EFAPS_LOGGER.info("Importing Data for efaps Localization module;");
+
+            RunLevel.init("shell");
+            RunLevel.execute();
 
             SearchQuery query = new SearchQuery();
             query.setQueryTypes("Ubicaciones_UbicacionStandardRoot");
@@ -66,18 +69,94 @@
             query.addSelect("OID");
             query.execute();
             if (!query.next()) {
-                RunLevel.init("shell");
-                RunLevel.execute();
 
                 URL url1 = new URL(EFAPS_ROOTURL, "Data/IMPORT_Lima.xml");
                 DataImport imp1 = DataImport.readFile(url1);
                 imp1.updateInDB();
             }
 
-            UIUpdate update = new UIUpdate();
+            SearchQuery query2 = new SearchQuery();
+            query2.setQueryTypes("Ubicaciones_UbicacionStandardRoot");
+            query2.addWhereExprEqValue("Name", "Amazonas");
+            query2.addSelect("OID");
+            query2.execute();
+            if (!query2.next()) {
+                URL url1 = new URL(EFAPS_ROOTURL, "Data/IMPORT_Amazonas.xml");
+                DataImport imp1 = DataImport.readFile(url1);
+                imp1.updateInDB();
+            }
+            SearchQuery query3 = new SearchQuery();
+            query3.setQueryTypes("Ubicaciones_UbicacionStandardRoot");
+            query3.addWhereExprEqValue("Name", "Ancash");
+            query3.addSelect("OID");
+            query3.execute();
+            if (!query3.next()) {
+                URL url1 = new URL(EFAPS_ROOTURL, "Data/IMPORT_Ancash.xml");
+                DataImport imp1 = DataImport.readFile(url1);
+                imp1.updateInDB();
+            }
+            SearchQuery query4 = new SearchQuery();
+            query4.setQueryTypes("Ubicaciones_UbicacionStandardRoot");
+            query4.addWhereExprEqValue("Name", "Apurimac");
+            query4.addSelect("OID");
+            query4.execute();
+            if (!query4.next()) {
+                URL url1 = new URL(EFAPS_ROOTURL, "Data/IMPORT_Apurimac.xml");
+                DataImport imp1 = DataImport.readFile(url1);
+                imp1.updateInDB();
+            }
+            SearchQuery query5 = new SearchQuery();
+            query5.setQueryTypes("Ubicaciones_UbicacionStandardRoot");
+            query5.addWhereExprEqValue("Name", "Arequipa");
+            query5.addSelect("OID");
+            query5.execute();
+            if (!query5.next()) {
+                URL url1 = new URL(EFAPS_ROOTURL, "Data/Arequipa.xml");
+                DataImport imp1 = DataImport.readFile(url1);
+                imp1.updateInDB();
+            }
+            SearchQuery query6 = new SearchQuery();
+            query6.setQueryTypes("Ubicaciones_UbicacionStandardRoot");
+            query6.addWhereExprEqValue("Name", "Ayacucho");
+            query6.addSelect("OID");
+            query6.execute();
+            if (!query6.next()) {
+                URL url1 = new URL(EFAPS_ROOTURL, "Data/Ayacucho.xml");
+                DataImport imp1 = DataImport.readFile(url1);
+                imp1.updateInDB();
+            }
+            SearchQuery query7 = new SearchQuery();
+            query7.setQueryTypes("Ubicaciones_UbicacionStandardRoot");
+            query7.addWhereExprEqValue("Name", "Cajamarca");
+            query7.addSelect("OID");
+            query7.execute();
+            if (!query7.next()) {
+                URL url1 = new URL(EFAPS_ROOTURL, "Data/Cajamarca.xml");
+                DataImport imp1 = DataImport.readFile(url1);
+                imp1.updateInDB();
+            }
+            SearchQuery query8 = new SearchQuery();
+            query8.setQueryTypes("Ubicaciones_UbicacionStandardRoot");
+            query8.addWhereExprEqValue("Name", "Callao");
+            query8.addSelect("OID");
+            query8.execute();
+            if (!query8.next()) {
+                URL url1 = new URL(EFAPS_ROOTURL, "Data/Callao.xml");
+                DataImport imp1 = DataImport.readFile(url1);
+                imp1.updateInDB();
+            }
+            SearchQuery query9 = new SearchQuery();
+            query9.setQueryTypes("Ubicaciones_UbicacionStandardRoot");
+            query9.addWhereExprEqValue("Name", "Cusco");
+            query9.addSelect("OID");
+            query9.execute();
+            if (!query9.next()) {
+                URL url1 = new URL(EFAPS_ROOTURL, "Data/Cusco.xml");
+                DataImport imp1 = DataImport.readFile(url1);
+                imp1.updateInDB();
+            }
 
-             <!-- Ubicaciones_UbicacionMyDesk , ERP_AttributeAbstractMyDesk -->
-            update.add2Menu("b1a580bd-c4a3-4d06-9b98-2e3b62e06254", "9427d507-4793-4751-83e8-f08dbf2df55d", 1);
+
         </script>
     </version>
 </install>
