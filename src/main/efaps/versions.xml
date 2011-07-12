@@ -111,7 +111,7 @@
             query5.addSelect("OID");
             query5.execute();
             if (!query5.next()) {
-                URL url1 = new URL(EFAPS_ROOTURL, "Data/Arequipa.xml");
+                URL url1 = new URL(EFAPS_ROOTURL, "Data/IMPORT_Arequipa.xml");
                 DataImport imp1 = DataImport.readFile(url1);
                 imp1.updateInDB();
             }
@@ -121,7 +121,7 @@
             query6.addSelect("OID");
             query6.execute();
             if (!query6.next()) {
-                URL url1 = new URL(EFAPS_ROOTURL, "Data/Ayacucho.xml");
+                URL url1 = new URL(EFAPS_ROOTURL, "Data/IMPORT_Ayacucho.xml");
                 DataImport imp1 = DataImport.readFile(url1);
                 imp1.updateInDB();
             }
@@ -131,7 +131,7 @@
             query7.addSelect("OID");
             query7.execute();
             if (!query7.next()) {
-                URL url1 = new URL(EFAPS_ROOTURL, "Data/Cajamarca.xml");
+                URL url1 = new URL(EFAPS_ROOTURL, "Data/IMPORT_Cajamarca.xml");
                 DataImport imp1 = DataImport.readFile(url1);
                 imp1.updateInDB();
             }
@@ -141,7 +141,7 @@
             query8.addSelect("OID");
             query8.execute();
             if (!query8.next()) {
-                URL url1 = new URL(EFAPS_ROOTURL, "Data/Callao.xml");
+                URL url1 = new URL(EFAPS_ROOTURL, "Data/IMPORT_Callao.xml");
                 DataImport imp1 = DataImport.readFile(url1);
                 imp1.updateInDB();
             }
@@ -151,7 +151,7 @@
             query9.addSelect("OID");
             query9.execute();
             if (!query9.next()) {
-                URL url1 = new URL(EFAPS_ROOTURL, "Data/Cusco.xml");
+                URL url1 = new URL(EFAPS_ROOTURL, "Data/IMPORT_Cusco.xml");
                 DataImport imp1 = DataImport.readFile(url1);
                 imp1.updateInDB();
             }
@@ -161,7 +161,7 @@
             query10.addSelect("OID");
             query10.execute();
             if (!query10.next()) {
-                URL url1 = new URL(EFAPS_ROOTURL, "Data/Huancavelica.xml");
+                URL url1 = new URL(EFAPS_ROOTURL, "Data/IMPORT_Huancavelica.xml");
                 DataImport imp1 = DataImport.readFile(url1);
                 imp1.updateInDB();
             }
