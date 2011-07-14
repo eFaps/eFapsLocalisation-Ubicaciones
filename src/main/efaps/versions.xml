@@ -213,63 +213,13 @@
                 DataImport imp1 = DataImport.readFile(url1);
                 imp1.updateInDB();
             }
-            SearchQuery query11 = new SearchQuery();
-            query11.setQueryTypes("Ubicaciones_UbicacionStandardRoot");
-            query11.addWhereExprEqValue("Name", "Huanuco");
-            query11.addSelect("OID");
-            query11.execute();
-            if (!query11.next()) {
-                URL url1 = new URL(EFAPS_ROOTURL, "Data/Huanuco.xml");
-                DataImport imp1 = DataImport.readFile(url1);
-                imp1.updateInDB();
-            }
-            SearchQuery query12 = new SearchQuery();
-            query12.setQueryTypes("Ubicaciones_UbicacionStandardRoot");
-            query12.addWhereExprEqValue("Name", "Ica");
-            query12.addSelect("OID");
-            query12.execute();
-            if (!query12.next()) {
-                URL url1 = new URL(EFAPS_ROOTURL, "Data/Ica.xml");
-                DataImport imp1 = DataImport.readFile(url1);
-                imp1.updateInDB();
-            }
-            SearchQuery query13 = new SearchQuery();
-            query13.setQueryTypes("Ubicaciones_UbicacionStandardRoot");
-            query13.addWhereExprEqValue("Name", "Junin");
-            query13.addSelect("OID");
-            query13.execute();
-            if (!query13.next()) {
-                URL url1 = new URL(EFAPS_ROOTURL, "Data/Junin.xml");
-                DataImport imp1 = DataImport.readFile(url1);
-                imp1.updateInDB();
-            }
-            SearchQuery query14 = new SearchQuery();
-            query14.setQueryTypes("Ubicaciones_UbicacionStandardRoot");
-            query14.addWhereExprEqValue("Name", "La Libertad");
-            query14.addSelect("OID");
-            query14.execute();
-            if (!query14.next()) {
-                URL url1 = new URL(EFAPS_ROOTURL, "Data/LaLibertad.xml");
-                DataImport imp1 = DataImport.readFile(url1);
-                imp1.updateInDB();
-            }
-            SearchQuery query15 = new SearchQuery();
-            query15.setQueryTypes("Ubicaciones_UbicacionStandardRoot");
-            query15.addWhereExprEqValue("Name", "Lambayeque");
-            query15.addSelect("OID");
-            query15.execute();
-            if (!query15.next()) {
-                URL url1 = new URL(EFAPS_ROOTURL, "Data/Lambayeque.xml");
-                DataImport imp1 = DataImport.readFile(url1);
-                imp1.updateInDB();
-            }
             SearchQuery query16 = new SearchQuery();
             query16.setQueryTypes("Ubicaciones_UbicacionStandardRoot");
             query16.addWhereExprEqValue("Name", "Loreto");
             query16.addSelect("OID");
             query16.execute();
             if (!query16.next()) {
-                URL url1 = new URL(EFAPS_ROOTURL, "Data/Loreto.xml");
+                URL url1 = new URL(EFAPS_ROOTURL, "Data/IMPORT_Loreto.xml");
                 DataImport imp1 = DataImport.readFile(url1);
                 imp1.updateInDB();
             }
@@ -279,7 +229,7 @@
             query17.addSelect("OID");
             query17.execute();
             if (!query17.next()) {
-                URL url1 = new URL(EFAPS_ROOTURL, "Data/MadreDeDios.xml");
+                URL url1 = new URL(EFAPS_ROOTURL, "Data/IMPORT_MadreDeDios.xml");
                 DataImport imp1 = DataImport.readFile(url1);
                 imp1.updateInDB();
             }
@@ -289,7 +239,7 @@
             query18.addSelect("OID");
             query18.execute();
             if (!query18.next()) {
-                URL url1 = new URL(EFAPS_ROOTURL, "Data/Moquegua.xml");
+                URL url1 = new URL(EFAPS_ROOTURL, "Data/IMPORT_Moquegua.xml");
                 DataImport imp1 = DataImport.readFile(url1);
                 imp1.updateInDB();
             }
@@ -299,7 +249,7 @@
             query19.addSelect("OID");
             query19.execute();
             if (!query19.next()) {
-                URL url1 = new URL(EFAPS_ROOTURL, "Data/Pasco.xml");
+                URL url1 = new URL(EFAPS_ROOTURL, "Data/IMPORT_Pasco.xml");
                 DataImport imp1 = DataImport.readFile(url1);
                 imp1.updateInDB();
             }
@@ -309,7 +259,7 @@
             query20.addSelect("OID");
             query20.execute();
             if (!query20.next()) {
-                URL url1 = new URL(EFAPS_ROOTURL, "Data/Piura.xml");
+                URL url1 = new URL(EFAPS_ROOTURL, "Data/IMPORT_Piura.xml");
                 DataImport imp1 = DataImport.readFile(url1);
                 imp1.updateInDB();
             }
@@ -319,7 +269,7 @@
             query21.addSelect("OID");
             query21.execute();
             if (!query21.next()) {
-                URL url1 = new URL(EFAPS_ROOTURL, "Data/Puno.xml");
+                URL url1 = new URL(EFAPS_ROOTURL, "Data/IMPORT_Puno.xml");
                 DataImport imp1 = DataImport.readFile(url1);
                 imp1.updateInDB();
             }
@@ -329,7 +279,7 @@
             query22.addSelect("OID");
             query22.execute();
             if (!query22.next()) {
-                URL url1 = new URL(EFAPS_ROOTURL, "Data/SanMartin.xml");
+                URL url1 = new URL(EFAPS_ROOTURL, "Data/IMPORT_SanMartin.xml");
                 DataImport imp1 = DataImport.readFile(url1);
                 imp1.updateInDB();
             }
@@ -339,7 +289,7 @@
             query23.addSelect("OID");
             query23.execute();
             if (!query22.next()) {
-                URL url1 = new URL(EFAPS_ROOTURL, "Data/Tacna.xml");
+                URL url1 = new URL(EFAPS_ROOTURL, "Data/IMPORT_Tacna.xml");
                 DataImport imp1 = DataImport.readFile(url1);
                 imp1.updateInDB();
             }
@@ -349,7 +299,7 @@
             query24.addSelect("OID");
             query24.execute();
             if (!query24.next()) {
-                URL url1 = new URL(EFAPS_ROOTURL, "Data/Tumbes.xml");
+                URL url1 = new URL(EFAPS_ROOTURL, "Data/IMPORT_Tumbes.xml");
                 DataImport imp1 = DataImport.readFile(url1);
                 imp1.updateInDB();
             }
@@ -359,11 +309,10 @@
             query25.addSelect("OID");
             query25.execute();
             if (!query25.next()) {
-                URL url1 = new URL(EFAPS_ROOTURL, "Data/Ucayali.xml");
+                URL url1 = new URL(EFAPS_ROOTURL, "Data/IMPORT_Ucayali.xml");
                 DataImport imp1 = DataImport.readFile(url1);
                 imp1.updateInDB();
             }
-
 
             UIUpdate update = new UIUpdate();
 
