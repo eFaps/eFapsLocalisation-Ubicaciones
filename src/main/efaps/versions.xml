@@ -288,7 +288,7 @@
             query23.addWhereExprEqValue("Name", "Tacna");
             query23.addSelect("OID");
             query23.execute();
-            if (!query22.next()) {
+            if (!query23.next()) {
                 URL url1 = new URL(EFAPS_ROOTURL, "Data/IMPORT_Tacna.xml");
                 DataImport imp1 = DataImport.readFile(url1);
                 imp1.updateInDB();

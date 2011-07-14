@@ -725,7 +725,11 @@
                 <attribute name="Name">Tauripampa</attribute>
             </object>
             <object type="Ubicaciones_UbicacionStandard">
-                <parentattribute name="Tomas"/>
+                <parentattribute name="ParentLink"/>
+                <attribute name="Name">Tomas</attribute>
+            </object>
+            <object type="Ubicaciones_UbicacionStandard">
+                <parentattribute name="ParentLink"/>
                 <attribute name="Name">Tupe</attribute>
             </object>
             <object type="Ubicaciones_UbicacionStandard">
