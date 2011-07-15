@@ -1,17 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
 
-  Copyright 2011 moxter.net S.A.C.
+  Copyright 2003 - 2011 The eFaps Team
 
-  All Rights Reserved.
-  This program contains proprietary and trade secret information of
-  moxter.net S.A.C. Copyright notice is precautionary only and does not
-  evidence any actual or intended publication of such program.
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
 
-  Author:          moxter.net S.A.C.
-  Revision:        $Rev: 310 $
-  Last Changed:    $Date: 2011-07-04 14:39:39 -0500 (lun, 04 jul 2011) $
-  Last Changed By: $Author: Jorge Cueva $
+  http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+
+  Author:          The eFaps Team
+  Revision:        $Rev: 6658 $
+  Last Changed:    $Date: 2011-06-22 12:57:17 -0500 (mié, 22 jun 2011) $
+  Last Changed By: $Author: m.aranya@moxter.net $
 
 -->
 
@@ -29,7 +36,7 @@
             </object>
             <object type="Ubicaciones_UbicacionStandard">
                 <parentattribute name="ParentLink"/>
-                <attribute name="Name">Asuncion</attribute>
+                <attribute name="Name">Asunción</attribute>
             </object>
             <object type="Ubicaciones_UbicacionStandard">
                 <parentattribute name="ParentLink"/>
@@ -121,7 +128,7 @@
             </object>
             <object type="Ubicaciones_UbicacionStandard">
                 <parentattribute name="ParentLink"/>
-                <attribute name="Name">Copallin</attribute>
+                <attribute name="Name">Copallín</attribute>
             </object>
             <object type="Ubicaciones_UbicacionStandard">
                 <parentattribute name="ParentLink"/>
