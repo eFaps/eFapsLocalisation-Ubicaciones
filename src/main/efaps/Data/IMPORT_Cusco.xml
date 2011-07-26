@@ -44,11 +44,11 @@
             </object>
             <object type="Ubicaciones_UbicacionStandard">
                 <parentattribute name="ParentLink"/>
-                <attribute name="Name">San Jeronimo</attribute>
+                <attribute name="Name">San Jerónimo</attribute>
             </object>
             <object type="Ubicaciones_UbicacionStandard">
                 <parentattribute name="ParentLink"/>
-                <attribute name="Name">San Sebastian</attribute>
+                <attribute name="Name">San Sebastián</attribute>
             </object>
             <object type="Ubicaciones_UbicacionStandard">
                 <parentattribute name="ParentLink"/>
@@ -204,7 +204,7 @@
             </object>
             <object type="Ubicaciones_UbicacionStandard">
                 <parentattribute name="ParentLink"/>
-                <attribute name="Name">Tupac Amaru</attribute>
+                <attribute name="Name">Túpac Amaru</attribute>
             </object>
         </object>
         <object type="Ubicaciones_UbicacionStandard">
@@ -248,7 +248,7 @@
             <attribute name="Name">Chumbivilcas</attribute>
             <object type="Ubicaciones_UbicacionStandard">
                 <parentattribute name="ParentLink"/>
-                <attribute name="Name">Santo Tomas</attribute>
+                <attribute name="Name">Santo Tomás</attribute>
             </object>
             <object type="Ubicaciones_UbicacionStandard">
                 <parentattribute name="ParentLink"/>
@@ -320,7 +320,7 @@
             <attribute name="Name">La Convención</attribute>
             <object type="Ubicaciones_UbicacionStandard">
                 <parentattribute name="ParentLink"/>
-                <attribute name="Name">Santa ana</attribute>
+                <attribute name="Name">Santa Ana</attribute>
             </object>
             <object type="Ubicaciones_UbicacionStandard">
                 <parentattribute name="ParentLink"/>
@@ -344,7 +344,7 @@
             </object>
             <object type="Ubicaciones_UbicacionStandard">
                 <parentattribute name="ParentLink"/>
-                <attribute name="Name">Kimbiri</attribute>
+                <attribute name="Name">Kimbirí</attribute>
             </object>
             <object type="Ubicaciones_UbicacionStandard">
                 <parentattribute name="ParentLink"/>

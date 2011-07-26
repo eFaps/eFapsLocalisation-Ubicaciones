@@ -26,7 +26,7 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
     <object type="Ubicaciones_UbicacionStandardRoot">
-        <attribute name="Name">Apurimac</attribute>
+        <attribute name="Name">Apurímac</attribute>
         <object type="Ubicaciones_UbicacionStandard">
             <parentattribute name="ParentLink"/>
             <attribute name="Name">Abancay</attribute>
@@ -119,7 +119,7 @@
             </object>
             <object type="Ubicaciones_UbicacionStandard">
                 <parentattribute name="ParentLink"/>
-                <attribute name="Name">San Jeronimo</attribute>
+                <attribute name="Name">San Jerónimo</attribute>
             </object>
             <object type="Ubicaciones_UbicacionStandard">
                 <parentattribute name="ParentLink"/>
@@ -127,7 +127,7 @@
             </object>
             <object type="Ubicaciones_UbicacionStandard">
                 <parentattribute name="ParentLink"/>
-                <attribute name="Name">Santa Maria De Chicmo</attribute>
+                <attribute name="Name">Santa María De Chicmo</attribute>
             </object>
             <object type="Ubicaciones_UbicacionStandard">
                 <parentattribute name="ParentLink"/>
@@ -347,7 +347,7 @@
             </object>
             <object type="Ubicaciones_UbicacionStandard">
                 <parentattribute name="ParentLink"/>
-                <attribute name="Name">San antonio</attribute>
+                <attribute name="Name">San Antonio</attribute>
             </object>
             <object type="Ubicaciones_UbicacionStandard">
                 <parentattribute name="ParentLink"/>

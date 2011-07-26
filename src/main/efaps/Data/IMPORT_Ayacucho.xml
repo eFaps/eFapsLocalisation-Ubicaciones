@@ -63,7 +63,7 @@
             </object>
             <object type="Ubicaciones_UbicacionStandard">
                 <parentattribute name="ParentLink"/>
-                <attribute name="Name">San Jose De Ticllas</attribute>
+                <attribute name="Name">San José De Ticllas</attribute>
             </object>
             <object type="Ubicaciones_UbicacionStandard">
                 <parentattribute name="ParentLink"/>
@@ -87,7 +87,7 @@
             </object>
             <object type="Ubicaciones_UbicacionStandard">
                 <parentattribute name="ParentLink"/>
-                <attribute name="Name">Jesus Nazareno</attribute>
+                <attribute name="Name">Jesús Nazareno</attribute>
             </object>
         </object>
 
@@ -108,7 +108,7 @@
             </object>
             <object type="Ubicaciones_UbicacionStandard">
                 <parentattribute name="ParentLink"/>
-                <attribute name="Name">Maria Parado De Bellido</attribute>
+                <attribute name="Name">María Parado De Bellido</attribute>
             </object>
             <object type="Ubicaciones_UbicacionStandard">
                 <parentattribute name="ParentLink"/>
@@ -122,7 +122,7 @@
 
         <object type="Ubicaciones_UbicacionStandard">
             <parentattribute name="ParentLink"/>
-            <attribute name="Name">Huanca sancos</attribute>
+            <attribute name="Name">Huanca Sancos</attribute>
             <object type="Ubicaciones_UbicacionStandard">
                 <parentattribute name="ParentLink"/>
                 <attribute name="Name">Sancos</attribute>
@@ -158,7 +158,7 @@
             </object>
             <object type="Ubicaciones_UbicacionStandard">
                 <parentattribute name="ParentLink"/>
-                <attribute name="Name">Iguain</attribute>
+                <attribute name="Name">Iguaín</attribute>
             </object>
             <object type="Ubicaciones_UbicacionStandard">
                 <parentattribute name="ParentLink"/>
@@ -183,7 +183,7 @@
             <attribute name="Name">La Mar</attribute>
             <object type="Ubicaciones_UbicacionStandard">
                 <parentattribute name="ParentLink"/>
-                <attribute name="Name">San miguel</attribute>
+                <attribute name="Name">San Miguel</attribute>
             </object>
             <object type="Ubicaciones_UbicacionStandard">
                 <parentattribute name="ParentLink"/>
@@ -203,7 +203,7 @@
             </object>
             <object type="Ubicaciones_UbicacionStandard">
                 <parentattribute name="ParentLink"/>
-                <attribute name="Name">Luis Carranza</attribute>
+                <attribute name="Name">Luís Carranza</attribute>
             </object>
             <object type="Ubicaciones_UbicacionStandard">
                 <parentattribute name="ParentLink"/>
@@ -277,7 +277,7 @@
             </object>
             <object type="Ubicaciones_UbicacionStandard">
                 <parentattribute name="ParentLink"/>
-                <attribute name="Name">San Cristobal</attribute>
+                <attribute name="Name">San Cristóbal</attribute>
             </object>
             <object type="Ubicaciones_UbicacionStandard">
                 <parentattribute name="ParentLink"/>
@@ -377,7 +377,7 @@
             </object>
             <object type="Ubicaciones_UbicacionStandard">
                 <parentattribute name="ParentLink"/>
-                <attribute name="Name">San Jose De Ushua</attribute>
+                <attribute name="Name">San José De Ushua</attribute>
             </object>
             <object type="Ubicaciones_UbicacionStandard">
                 <parentattribute name="ParentLink"/>
@@ -488,10 +488,10 @@
 
         <object type="Ubicaciones_UbicacionStandard">
             <parentattribute name="ParentLink"/>
-            <attribute name="Name">Vilcas Huaman</attribute>
+            <attribute name="Name">Vilcas Huamán</attribute>
             <object type="Ubicaciones_UbicacionStandard">
                 <parentattribute name="ParentLink"/>
-                <attribute name="Name">Vilcas Huaman</attribute>
+                <attribute name="Name">Vilcas Huamán</attribute>
             </object>
             <object type="Ubicaciones_UbicacionStandard">
                 <parentattribute name="ParentLink"/>
@@ -503,7 +503,7 @@
             </object>
             <object type="Ubicaciones_UbicacionStandard">
                 <parentattribute name="ParentLink"/>
-                <attribute name="Name">Concepcion</attribute>
+                <attribute name="Name">Concepción</attribute>
             </object>
             <object type="Ubicaciones_UbicacionStandard">
                 <parentattribute name="ParentLink"/>

@@ -204,7 +204,7 @@
             </object>
             <object type="Ubicaciones_UbicacionStandard">
                 <parentattribute name="ParentLink"/>
-                <attribute name="Name">Rio Santiago</attribute>
+                <attribute name="Name">Río Santiago</attribute>
             </object>
         </object>
             <object type="Ubicaciones_UbicacionStandard">
@@ -252,7 +252,7 @@
             </object>
               <object type="Ubicaciones_UbicacionStandard">
                 <parentattribute name="ParentLink"/>
-                <attribute name="Name">Maria</attribute>
+                <attribute name="Name">María</attribute>
             </object>
               <object type="Ubicaciones_UbicacionStandard">
                 <parentattribute name="ParentLink"/>
@@ -292,7 +292,7 @@
             </object>
               <object type="Ubicaciones_UbicacionStandard">
                 <parentattribute name="ParentLink"/>
-                <attribute name="Name">Santiago Tomas</attribute>
+                <attribute name="Name">Santiago Tomás</attribute>
             </object>
               <object type="Ubicaciones_UbicacionStandard">
                 <parentattribute name="ParentLink"/>
@@ -305,10 +305,10 @@
         </object>
         <object type="Ubicaciones_UbicacionStandard">
             <parentattribute name="ParentLink"/>
-            <attribute name="Name">Rodriguez de Mendoza</attribute>
+            <attribute name="Name">Rodríguez de Mendoza</attribute>
             <object type="Ubicaciones_UbicacionStandard">
                 <parentattribute name="ParentLink"/>
-                <attribute name="Name">San Nicolas</attribute>
+                <attribute name="Name">San Nicolás</attribute>
             </object>
             <object type="Ubicaciones_UbicacionStandard">
                 <parentattribute name="ParentLink"/>
@@ -384,7 +384,7 @@
             </object>
             <object type="Ubicaciones_UbicacionStandard">
                 <parentattribute name="ParentLink"/>
-                <attribute name="Name">Yamon</attribute>
+                <attribute name="Name">Yamón</attribute>
             </object>
         </object>
       </object>

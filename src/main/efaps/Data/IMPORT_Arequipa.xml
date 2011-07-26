@@ -103,7 +103,7 @@
             </object>
             <object type="Ubicaciones_UbicacionStandard">
                 <parentattribute name="ParentLink"/>
-                <attribute name="Name">San Juan Se Tarucani</attribute>
+                <attribute name="Name">San Juan De Tarucani</attribute>
             </object>
             <object type="Ubicaciones_UbicacionStandard">
                 <parentattribute name="ParentLink"/>
@@ -143,32 +143,32 @@
             </object>
             <object type="Ubicaciones_UbicacionStandard">
                 <parentattribute name="ParentLink"/>
-                <attribute name="Name">Jose Luis Bustamante Y Rivero</attribute>
+                <attribute name="Name">Jose Luís Bustamante Y Rivero</attribute>
             </object>
         </object>
 
         <object type="Ubicaciones_UbicacionStandard">
             <parentattribute name="ParentLink"/>
-            <attribute name="Name">Camana</attribute>
+            <attribute name="Name">Camaná</attribute>
             <object type="Ubicaciones_UbicacionStandard">
                 <parentattribute name="ParentLink"/>
-                <attribute name="Name">Camana</attribute>
+                <attribute name="Name">Camaná</attribute>
             </object>
             <object type="Ubicaciones_UbicacionStandard">
                 <parentattribute name="ParentLink"/>
-                <attribute name="Name">Jose Maria Quimper</attribute>
+                <attribute name="Name">Jose María Quimper</attribute>
             </object>
             <object type="Ubicaciones_UbicacionStandard">
                 <parentattribute name="ParentLink"/>
-                <attribute name="Name">Mariano Nicolas Valcarcel</attribute>
+                <attribute name="Name">Mariano Nicolás Valcarcel</attribute>
             </object>
             <object type="Ubicaciones_UbicacionStandard">
                 <parentattribute name="ParentLink"/>
-                <attribute name="Name">Mariscal Caceres</attribute>
+                <attribute name="Name">Mariscal Cáceres</attribute>
             </object>
             <object type="Ubicaciones_UbicacionStandard">
                 <parentattribute name="ParentLink"/>
-                <attribute name="Name">Nicolas De Pierola</attribute>
+                <attribute name="Name">Nicolás De Pierola</attribute>
             </object>
             <object type="Ubicaciones_UbicacionStandard">
                 <parentattribute name="ParentLink"/>
@@ -205,7 +205,7 @@
             </object>
             <object type="Ubicaciones_UbicacionStandard">
                 <parentattribute name="ParentLink"/>
-                <attribute name="Name">Bella Union</attribute>
+                <attribute name="Name">Bella Unión</attribute>
             </object>
             <object type="Ubicaciones_UbicacionStandard">
                 <parentattribute name="ParentLink"/>
@@ -290,7 +290,7 @@
             </object>
             <object type="Ubicaciones_UbicacionStandard">
                 <parentattribute name="ParentLink"/>
-                <attribute name="Name">Uñon</attribute>
+                <attribute name="Name">Uñón</attribute>
             </object>
             <object type="Ubicaciones_UbicacionStandard">
                 <parentattribute name="ParentLink"/>
@@ -414,7 +414,7 @@
             </object>
             <object type="Ubicaciones_UbicacionStandard">
                 <parentattribute name="ParentLink"/>
-                <attribute name="Name">Rio Grande</attribute>
+                <attribute name="Name">Río Grande</attribute>
             </object>
             <object type="Ubicaciones_UbicacionStandard">
                 <parentattribute name="ParentLink"/>
@@ -447,7 +447,7 @@
             </object>
             <object type="Ubicaciones_UbicacionStandard">
                 <parentattribute name="ParentLink"/>
-                <attribute name="Name">Mejia</attribute>
+                <attribute name="Name">Mejáa</attribute>
             </object>
             <object type="Ubicaciones_UbicacionStandard">
                 <parentattribute name="ParentLink"/>
@@ -457,7 +457,7 @@
 
         <object type="Ubicaciones_UbicacionStandard">
             <parentattribute name="ParentLink"/>
-            <attribute name="Name">La Union</attribute>
+            <attribute name="Name">La Unión</attribute>
             <object type="Ubicaciones_UbicacionStandard">
                 <parentattribute name="ParentLink"/>
                 <attribute name="Name">Cotahuasi</attribute>
