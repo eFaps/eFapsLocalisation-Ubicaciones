@@ -85,7 +85,7 @@
             }
             SearchQuery query3 = new SearchQuery();
             query3.setQueryTypes("Ubicaciones_UbicacionStandardRoot");
-            query3.addWhereExprEqValue("Name", "Apurimac");
+            query3.addWhereExprEqValue("Name", "Apurímac");
             query3.addSelect("OID");
             query3.execute();
             if (!query3.next()) {
@@ -313,13 +313,6 @@
                 DataImport imp1 = DataImport.readFile(url1);
                 imp1.updateInDB();
             }
-
-            UIUpdate update = new UIUpdate();
-
-             <!-- Ubicaciones_UbicacionMyDesk , ERP_AttributeAbstractMyDesk -->
-            update.add2Menu("b1a580bd-c4a3-4d06-9b98-2e3b62e06254", "9427d507-4793-4751-83e8-f08dbf2df55d", 1);
-
-
         </script>
     </version>
 </install>

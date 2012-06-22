@@ -78,6 +78,7 @@ public abstract class Ubicaciones_Base
         final StringBuilder js = new StringBuilder();
         final String target = (String) props.get("targetField");
         if (target != null && !target.isEmpty()) {
+            js.append("var box; var option;");
             final String clean = (String) props.get("cleanFields");
             if (clean != null && !clean.isEmpty()) {
                 final String[] cleanFields = clean.split(";");
