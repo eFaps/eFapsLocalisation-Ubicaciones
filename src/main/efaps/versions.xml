@@ -57,6 +57,7 @@
             import org.efaps.db.Context;
             import org.efaps.db.QueryBuilder;
             import org.efaps.db.InstanceQuery;
+            import org.efaps.esjp.admin.ui.UIUpdate;
             import org.efaps.importer.DataImport;
 
             EFAPS_LOGGER.info("Importing Data for efaps Localization module;");
@@ -267,6 +268,10 @@
             if (!query.next()) {
                 DataImport.readFile(new URL(EFAPS_ROOTURL, "Data/IMPORT_Ucayali.xml")).updateInDB();
             }
+
+            UIUpdate update = new UIUpdate();
+            <!-- Ubicaciones_UbicacionMyDesk , ERP_AttributeAbstractMyDesk -->
+             update.add2Menu("b1a580bd-c4a3-4d06-9b98-2e3b62e06254", "9427d507-4793-4751-83e8-f08dbf2df55d", 1);
 
         </script>
     </version>

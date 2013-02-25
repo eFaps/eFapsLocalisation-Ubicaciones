@@ -25,7 +25,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.apache.commons.lang.StringEscapeUtils;
+import org.apache.commons.lang3.StringEscapeUtils;
 import org.efaps.admin.datamodel.ui.FieldValue;
 import org.efaps.admin.event.Parameter;
 import org.efaps.admin.event.Parameter.ParameterValues;
@@ -89,11 +89,11 @@ public abstract class Ubicaciones_Base
             }
             js.append("box = document.getElementsByName(\'").append(target).append("\')[0];")
                 .append("while ( box.options.length ) box.options[0] = null;")
-                .append("option = new Option(\"").append(StringEscapeUtils.unescapeJavaScript("-")).append("\",")
+                .append("option = new Option(\"").append(StringEscapeUtils.escapeEcmaScript("-")).append("\",")
                 .append(0).append(");").append("box.options[box.length] = option;");
             while (multi.next()) {
                 final String name = multi.<String>getAttribute(CIUbicaciones.UbicacionStandard.Name);
-                js.append("option = new Option(\"").append(StringEscapeUtils.unescapeJavaScript(name)).append("\",")
+                js.append("option = new Option(\"").append(StringEscapeUtils.escapeEcmaScript(name)).append("\",")
                     .append(multi.getCurrentInstance().getId()).append(");").append("box.options[box.length] = option;");
             }
         }
