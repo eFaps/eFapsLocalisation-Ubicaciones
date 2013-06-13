@@ -33,10 +33,7 @@
     <definition>
         <version-expression>(version==latest)</version-expression>
         <name>Ubicaciones_UbicacionMyDesk</name>
-        <access>
-            <role>Contacts_Admin</role>
-        </access>
-
+        <!-- If the Contacts Module will be installed the access is set to the Contacts_Admin Role -->
         <target>
             <menu>Ubicaciones_UbicacionMyDesk_Menu</menu>
             <table>Ubicaciones_UbicacionAbstractTable</table>

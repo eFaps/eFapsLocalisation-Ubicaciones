@@ -34,22 +34,15 @@
     <definition>
         <version-expression>(version==latest)</version-expression>
         <name>Ubicaciones_UbicacionMyDesk_Menu_Action_Create</name>
-        <access>
-            <role>Contacts_Admin</role>
-        </access>
-        <!-- target definitions -->
+        <!-- If the Contacts Module will be installed the access is set to the Contacts_Admin Role -->
         <target>
             <form>Ubicaciones_UbicacionAbstractForm</form>
             <execute program="org.efaps.esjp.common.uiform.Create" method="execute" />
         </target>
 
-        <!-- properties -->
         <property name="Target">modal</property>
         <property name="TargetCreateType">Ubicaciones_UbicacionStandardRoot</property>
         <property name="TargetMode">create</property>
-        <property name="WindowHeight">660</property>
-        <property name="WindowWidth">1200</property>
         <property name="TargetDefaultMenu">none</property>
     </definition>
-
 </ui-command>

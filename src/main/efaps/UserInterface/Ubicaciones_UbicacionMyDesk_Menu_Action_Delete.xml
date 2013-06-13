@@ -34,12 +34,10 @@
     <definition>
         <version-expression>(version==latest)</version-expression>
         <name>Ubicaciones_UbicacionMyDesk_Menu_Action_Delete</name>
-
-        <!-- target definitions -->
+        <!-- If the Contacts Module will be installed the access is set to the Contacts_Admin Role -->
         <target>
             <execute program="org.efaps.esjp.common.uitable.CommonDelete" />
         </target>
-        <!-- properties -->
         <property name="AskUser">true</property>
         <property name="Submit">true</property>
     </definition>
