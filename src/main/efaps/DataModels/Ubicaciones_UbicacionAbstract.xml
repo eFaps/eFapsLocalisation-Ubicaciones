@@ -31,7 +31,6 @@
     <file-revision>$Rev$</file-revision>
 
     <definition>
-
         <version-expression>(version==latest)</version-expression>
         <name>Ubicaciones_UbicacionAbstract</name>
         <purpose abstract="true"/>
@@ -65,6 +64,12 @@
             <type>String</type>
             <sqltable>Ubicaciones_UbicacionAbstractSQLTable</sqltable>
             <sqlcolumn>NAME</sqlcolumn>
+        </attribute>
+         <attribute>
+            <name>Code</name>
+            <type>String</type>
+            <sqltable>Ubicaciones_UbicacionAbstractSQLTable</sqltable>
+            <sqlcolumn>CODE</sqlcolumn>
         </attribute>
         <attribute>
             <name>Creator</name>

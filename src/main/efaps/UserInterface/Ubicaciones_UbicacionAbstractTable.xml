@@ -46,6 +46,10 @@
             <property name="HRef">${COMMONURL}/MenuTree.jsp</property>
             <property name="ShowTypeIcon">true</property>
         </field>
+        <field name="code">
+            <property name="Attribute">Name</property>
+            <property name="Label">Ubicaciones_UbicacionAbstract/Code.Label</property>
+        </field>
         <field name="buttonOpenInNewWindow">
             <icon>eFapsActionNewWindow</icon>
             <property name="HRef">${COMMONURL}/MenuTree.jsp</property>
