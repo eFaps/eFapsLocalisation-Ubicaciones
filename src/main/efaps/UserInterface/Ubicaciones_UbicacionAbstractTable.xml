@@ -47,7 +47,7 @@
             <property name="ShowTypeIcon">true</property>
         </field>
         <field name="code">
-            <property name="Attribute">Name</property>
+            <property name="Attribute">Code</property>
             <property name="Label">Ubicaciones_UbicacionAbstract/Code.Label</property>
         </field>
         <field name="buttonOpenInNewWindow">
