@@ -569,7 +569,7 @@
             <object type="Ubicaciones_UbicacionStandard">
                 <parentattribute name="ParentLink" />
                 <attribute name="Name">Patambuco</attribute>
-                <attribute name="Code">2112004</attribute>
+                <attribute name="Code">211204</attribute>
             </object>
             <object type="Ubicaciones_UbicacionStandard">
                 <parentattribute name="ParentLink" />
