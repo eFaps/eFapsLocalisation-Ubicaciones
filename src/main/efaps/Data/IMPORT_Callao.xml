@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
 
-  Copyright 2003 - 2011 The eFaps Team
+  Copyright 2003 - 2013 The eFaps Team
 
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
@@ -22,37 +22,49 @@
 
 -->
 
-<import xmlns="http://www.efaps.org/xsd"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<!--
+    Datos segun Instituto Nacional de Estatistica e Informatica INEI
+    Codigos de Ubicacion Geografica UBIGE (Version 2010)
+-->
+
+<import xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
     <object type="Ubicaciones_UbicacionStandardRoot">
         <attribute name="Name">Callao</attribute>
+        <attribute name="Code">070000</attribute>
         <object type="Ubicaciones_UbicacionStandard">
-            <parentattribute name="ParentLink"/>
+            <parentattribute name="ParentLink" />
             <attribute name="Name">Callao</attribute>
+            <attribute name="Code">070100</attribute>
             <object type="Ubicaciones_UbicacionStandard">
-                <parentattribute name="ParentLink"/>
+                <parentattribute name="ParentLink" />
                 <attribute name="Name">Callao</attribute>
+                <attribute name="Code">070101</attribute>
             </object>
             <object type="Ubicaciones_UbicacionStandard">
-                <parentattribute name="ParentLink"/>
+                <parentattribute name="ParentLink" />
                 <attribute name="Name">Bellavista</attribute>
+                <attribute name="Code">070102</attribute>
             </object>
             <object type="Ubicaciones_UbicacionStandard">
-                <parentattribute name="ParentLink"/>
+                <parentattribute name="ParentLink" />
                 <attribute name="Name">Carmen De La Legua Reynoso</attribute>
+                <attribute name="Code">070103</attribute>
             </object>
             <object type="Ubicaciones_UbicacionStandard">
-                <parentattribute name="ParentLink"/>
+                <parentattribute name="ParentLink" />
                 <attribute name="Name">La Perla</attribute>
+                <attribute name="Code">070104</attribute>
             </object>
             <object type="Ubicaciones_UbicacionStandard">
-                <parentattribute name="ParentLink"/>
+                <parentattribute name="ParentLink" />
                 <attribute name="Name">La Punta</attribute>
+                <attribute name="Code">070105</attribute>
             </object>
             <object type="Ubicaciones_UbicacionStandard">
-                <parentattribute name="ParentLink"/>
+                <parentattribute name="ParentLink" />
                 <attribute name="Name">Ventanilla</attribute>
+                <attribute name="Code">070106</attribute>
             </object>
         </object>
     </object>

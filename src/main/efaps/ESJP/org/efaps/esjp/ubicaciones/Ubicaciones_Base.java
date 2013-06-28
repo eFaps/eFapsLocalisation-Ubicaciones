@@ -34,6 +34,7 @@ import org.efaps.admin.event.Return.ReturnValues;
 import org.efaps.admin.program.esjp.EFapsRevision;
 import org.efaps.admin.program.esjp.EFapsUUID;
 import org.efaps.admin.ui.field.Field;
+import org.efaps.db.CachedPrintQuery;
 import org.efaps.db.Instance;
 import org.efaps.db.MultiPrintQuery;
 import org.efaps.db.PrintQuery;
@@ -54,6 +55,9 @@ import org.efaps.util.EFapsException;
 public abstract class Ubicaciones_Base
 {
 
+    public static final String CACHEKEY = "org.efaps.esjp.ubicaciones.Ubicaciones.CACHEKEY";
+
+
     /**
      * Method is called with update event only in case the selected item.
      *
@@ -71,7 +75,7 @@ public abstract class Ubicaciones_Base
         final QueryBuilder queryBldr = new QueryBuilder(CIUbicaciones.UbicacionStandard);
         queryBldr.addWhereAttrEqValue(CIUbicaciones.UbicacionStandard.ParentLink, id);
         queryBldr.addOrderByAttributeAsc(CIUbicaciones.UbicacionStandard.Name);
-        final MultiPrintQuery multi = queryBldr.getPrint();
+        final MultiPrintQuery multi = queryBldr.getCachedPrint(Ubicaciones_Base.CACHEKEY);
         multi.setEnforceSorted(true);
         multi.addAttribute(CIUbicaciones.UbicacionStandard.Name);
         multi.execute();
@@ -121,7 +125,7 @@ public abstract class Ubicaciones_Base
 
                 final Instance instance = _parameter.getCallInstance();
                 if (parentAttr != null && !"".equals(parentAttr)) {
-                    final PrintQuery print = new PrintQuery(instance);
+                    final PrintQuery print = new CachedPrintQuery(instance, Ubicaciones_Base.CACHEKEY);
                     final SelectBuilder selID = new SelectBuilder().linkto(parentAttr).attribute("ID");
                     print.addSelect(selID);
                     if (print.execute()) {
@@ -142,7 +146,7 @@ public abstract class Ubicaciones_Base
                 final FieldValue fieldValue = (FieldValue) _parameter.get(ParameterValues.UIOBJECT);
                 final Instance instance = _parameter.getCallInstance();
                 if (fieldValue != null) {
-                    final PrintQuery print = new PrintQuery(instance);
+                    final PrintQuery print = new CachedPrintQuery(instance, Ubicaciones_Base.CACHEKEY);
                     final SelectBuilder selID = new SelectBuilder()
                                                         .linkto(fieldValue.getAttribute().getName()).attribute("ID");
                     print.addSelect(selID);
