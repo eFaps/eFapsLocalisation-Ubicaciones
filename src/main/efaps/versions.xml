@@ -58,220 +58,25 @@
             import org.efaps.db.QueryBuilder;
             import org.efaps.db.InstanceQuery;
             import org.efaps.esjp.admin.ui.UIUpdate;
-            import org.efaps.importer.DataImport;
+            import org.efaps.esjp.data.ObjectImport;
 
             EFAPS_LOGGER.info("Importing Data for efaps Localization module;");
 
             RunLevel.init("shell");
             RunLevel.execute();
 
-
             //Ubicaciones_UbicacionStandardRoot
             QueryBuilder queryBldr = new QueryBuilder(UUID.fromString("6f85a09a-7e68-44a1-9fef-74dfc28f4d59"));
-            queryBldr.addWhereAttrEqValue("Name", "Amazonas");
             InstanceQuery query = queryBldr.getQuery();
             query.executeWithoutAccessCheck();
             if (!query.next()) {
-                 DataImport.readFile(new URL(EFAPS_ROOTURL, "Data/IMPORT_Amazonas.xml")).updateInDB();
-            }
-
-            queryBldr = new QueryBuilder(UUID.fromString("6f85a09a-7e68-44a1-9fef-74dfc28f4d59"));
-            queryBldr.addWhereAttrEqValue("Name", "Ancash");
-            query = queryBldr.getQuery();
-            query.executeWithoutAccessCheck();
-            if (!query.next()) {
-                DataImport.readFile(new URL(EFAPS_ROOTURL, "Data/IMPORT_Ancash.xml")).updateInDB();
-            }
-
-
-            queryBldr = new QueryBuilder(UUID.fromString("6f85a09a-7e68-44a1-9fef-74dfc28f4d59"));
-            queryBldr.addWhereAttrEqValue("Name", "Apurímac");
-            query = queryBldr.getQuery();
-            query.executeWithoutAccessCheck();
-            if (!query.next()) {
-                DataImport.readFile(new URL(EFAPS_ROOTURL, "Data/IMPORT_Apurimac.xml")).updateInDB();
-            }
-
-            queryBldr = new QueryBuilder(UUID.fromString("6f85a09a-7e68-44a1-9fef-74dfc28f4d59"));
-            queryBldr.addWhereAttrEqValue("Name", "Arequipa");
-            query = queryBldr.getQuery();
-            query.executeWithoutAccessCheck();
-            if (!query.next()) {
-                DataImport.readFile(new URL(EFAPS_ROOTURL, "Data/IMPORT_Arequipa.xml")).updateInDB();
-            }
-
-
-            queryBldr = new QueryBuilder(UUID.fromString("6f85a09a-7e68-44a1-9fef-74dfc28f4d59"));
-            queryBldr.addWhereAttrEqValue("Name", "Ayacucho");
-            query = queryBldr.getQuery();
-            query.executeWithoutAccessCheck();
-            if (!query.next()) {
-                DataImport.readFile(new URL(EFAPS_ROOTURL, "Data/IMPORT_Ayacucho.xml")).updateInDB();
-            }
-
-            queryBldr = new QueryBuilder(UUID.fromString("6f85a09a-7e68-44a1-9fef-74dfc28f4d59"));
-            queryBldr.addWhereAttrEqValue("Name", "Cajamarca");
-            query = queryBldr.getQuery();
-            query.executeWithoutAccessCheck();
-            if (!query.next()) {
-                DataImport.readFile(new URL(EFAPS_ROOTURL, "Data/IMPORT_Cajamarca.xml")).updateInDB();
-            }
-
-            queryBldr = new QueryBuilder(UUID.fromString("6f85a09a-7e68-44a1-9fef-74dfc28f4d59"));
-            queryBldr.addWhereAttrEqValue("Name", "Callao");
-            query = queryBldr.getQuery();
-            query.executeWithoutAccessCheck();
-            if (!query.next()) {
-                DataImport.readFile(new URL(EFAPS_ROOTURL, "Data/IMPORT_Callao.xml")).updateInDB();
-            }
-
-            queryBldr = new QueryBuilder(UUID.fromString("6f85a09a-7e68-44a1-9fef-74dfc28f4d59"));
-            queryBldr.addWhereAttrEqValue("Name", "Cusco");
-            query = queryBldr.getQuery();
-            query.executeWithoutAccessCheck();
-            if (!query.next()) {
-                DataImport.readFile(new URL(EFAPS_ROOTURL, "Data/IMPORT_Cusco.xml")).updateInDB();
-            }
-
-            queryBldr = new QueryBuilder(UUID.fromString("6f85a09a-7e68-44a1-9fef-74dfc28f4d59"));
-            queryBldr.addWhereAttrEqValue("Name", "Huancavelica");
-            query = queryBldr.getQuery();
-            query.executeWithoutAccessCheck();
-            if (!query.next()) {
-                DataImport.readFile(new URL(EFAPS_ROOTURL, "Data/IMPORT_Huancavelica.xml")).updateInDB();
-            }
-
-            queryBldr = new QueryBuilder(UUID.fromString("6f85a09a-7e68-44a1-9fef-74dfc28f4d59"));
-            queryBldr.addWhereAttrEqValue("Name", "Huanuco");
-            query = queryBldr.getQuery();
-            query.executeWithoutAccessCheck();
-            if (!query.next()) {
-                DataImport.readFile(new URL(EFAPS_ROOTURL, "Data/IMPORT_Huanuco.xml")).updateInDB();
-            }
-
-            queryBldr = new QueryBuilder(UUID.fromString("6f85a09a-7e68-44a1-9fef-74dfc28f4d59"));
-            queryBldr.addWhereAttrEqValue("Name", "Ica");
-            query = queryBldr.getQuery();
-            query.executeWithoutAccessCheck();
-            if (!query.next()) {
-                DataImport.readFile(new URL(EFAPS_ROOTURL, "Data/IMPORT_Ica.xml")).updateInDB();
-            }
-
-            queryBldr = new QueryBuilder(UUID.fromString("6f85a09a-7e68-44a1-9fef-74dfc28f4d59"));
-            queryBldr.addWhereAttrEqValue("Name", "Junin");
-            query = queryBldr.getQuery();
-            query.executeWithoutAccessCheck();
-            if (!query.next()) {
-                DataImport.readFile(new URL(EFAPS_ROOTURL, "Data/IMPORT_Junin.xml")).updateInDB();
-            }
-
-            queryBldr = new QueryBuilder(UUID.fromString("6f85a09a-7e68-44a1-9fef-74dfc28f4d59"));
-            queryBldr.addWhereAttrEqValue("Name", "La Libertad");
-            query = queryBldr.getQuery();
-            query.executeWithoutAccessCheck();
-            if (!query.next()) {
-                DataImport.readFile(new URL(EFAPS_ROOTURL, "Data/IMPORT_LaLibertad.xml")).updateInDB();
-            }
-
-            queryBldr = new QueryBuilder(UUID.fromString("6f85a09a-7e68-44a1-9fef-74dfc28f4d59"));
-            queryBldr.addWhereAttrEqValue("Name", "Lambayeque");
-            query = queryBldr.getQuery();
-            query.executeWithoutAccessCheck();
-            if (!query.next()) {
-                DataImport.readFile(new URL(EFAPS_ROOTURL, "Data/IMPORT_Lambayeque.xml")).updateInDB();
-            }
-
-            queryBldr = new QueryBuilder(UUID.fromString("6f85a09a-7e68-44a1-9fef-74dfc28f4d59"));
-            queryBldr.addWhereAttrEqValue("Name", "Lima");
-            query = queryBldr.getQuery();
-            query.executeWithoutAccessCheck();
-            if (!query.next()) {
-                DataImport.readFile(new URL(EFAPS_ROOTURL, "Data/IMPORT_Lima.xml")).updateInDB();
-            }
-
-            queryBldr = new QueryBuilder(UUID.fromString("6f85a09a-7e68-44a1-9fef-74dfc28f4d59"));
-            queryBldr.addWhereAttrEqValue("Name", "Loreto");
-            query = queryBldr.getQuery();
-            query.executeWithoutAccessCheck();
-            if (!query.next()) {
-                DataImport.readFile(new URL(EFAPS_ROOTURL, "Data/IMPORT_Loreto.xml")).updateInDB();
-            }
-
-            queryBldr = new QueryBuilder(UUID.fromString("6f85a09a-7e68-44a1-9fef-74dfc28f4d59"));
-            queryBldr.addWhereAttrEqValue("Name", "Madre De Dios");
-            query = queryBldr.getQuery();
-            query.executeWithoutAccessCheck();
-            if (!query.next()) {
-                DataImport.readFile(new URL(EFAPS_ROOTURL, "Data/IMPORT_MadreDeDios.xml")).updateInDB();
-            }
-
-            queryBldr = new QueryBuilder(UUID.fromString("6f85a09a-7e68-44a1-9fef-74dfc28f4d59"));
-            queryBldr.addWhereAttrEqValue("Name", "Moquegua");
-            query = queryBldr.getQuery();
-            query.executeWithoutAccessCheck();
-            if (!query.next()) {
-                DataImport.readFile(new URL(EFAPS_ROOTURL, "Data/IMPORT_Moquegua.xml")).updateInDB();
-            }
-
-            queryBldr = new QueryBuilder(UUID.fromString("6f85a09a-7e68-44a1-9fef-74dfc28f4d59"));
-            queryBldr.addWhereAttrEqValue("Name", "Pasco");
-            query = queryBldr.getQuery();
-            query.executeWithoutAccessCheck();
-            if (!query.next()) {
-                DataImport.readFile(new URL(EFAPS_ROOTURL, "Data/IMPORT_Pasco.xml")).updateInDB();
-            }
-
-            queryBldr = new QueryBuilder(UUID.fromString("6f85a09a-7e68-44a1-9fef-74dfc28f4d59"));
-            queryBldr.addWhereAttrEqValue("Name", "Piura");
-            query = queryBldr.getQuery();
-            query.executeWithoutAccessCheck();
-            if (!query.next()) {
-                DataImport.readFile(new URL(EFAPS_ROOTURL, "Data/IMPORT_Piura.xml")).updateInDB();
-            }
-
-            queryBldr = new QueryBuilder(UUID.fromString("6f85a09a-7e68-44a1-9fef-74dfc28f4d59"));
-            queryBldr.addWhereAttrEqValue("Name", "Puno");
-            query = queryBldr.getQuery();
-            query.executeWithoutAccessCheck();
-            if (!query.next()) {
-                DataImport.readFile(new URL(EFAPS_ROOTURL, "Data/IMPORT_Puno.xml")).updateInDB();
-            }
-
-            queryBldr = new QueryBuilder(UUID.fromString("6f85a09a-7e68-44a1-9fef-74dfc28f4d59"));
-            queryBldr.addWhereAttrEqValue("Name", "San Martin");
-            query = queryBldr.getQuery();
-            query.executeWithoutAccessCheck();
-            if (!query.next()) {
-                DataImport.readFile(new URL(EFAPS_ROOTURL, "Data/IMPORT_SanMartin.xml")).updateInDB();
-            }
-
-            queryBldr = new QueryBuilder(UUID.fromString("6f85a09a-7e68-44a1-9fef-74dfc28f4d59"));
-            queryBldr.addWhereAttrEqValue("Name", "Tacna");
-            query = queryBldr.getQuery();
-            query.executeWithoutAccessCheck();
-            if (!query.next()) {
-                DataImport.readFile(new URL(EFAPS_ROOTURL, "Data/IMPORT_Tacna.xml")).updateInDB();
-            }
-
-            queryBldr = new QueryBuilder(UUID.fromString("6f85a09a-7e68-44a1-9fef-74dfc28f4d59"));
-            queryBldr.addWhereAttrEqValue("Name", "Tumbes");
-            query = queryBldr.getQuery();
-            query.executeWithoutAccessCheck();
-            if (!query.next()) {
-                DataImport.readFile(new URL(EFAPS_ROOTURL, "Data/IMPORT_Tumbes.xml")).updateInDB();
-            }
-
-            queryBldr = new QueryBuilder(UUID.fromString("6f85a09a-7e68-44a1-9fef-74dfc28f4d59"));
-            queryBldr.addWhereAttrEqValue("Name", "Ucayali");
-            query = queryBldr.getQuery();
-            query.executeWithoutAccessCheck();
-            if (!query.next()) {
-                DataImport.readFile(new URL(EFAPS_ROOTURL, "Data/IMPORT_Ucayali.xml")).updateInDB();
+                ObjectImport objImport = new ObjectImport();
+                objImport.importFromFile(new URL(EFAPS_ROOTURL, "Data/DataImport_Ubicacion.xml"));
             }
 
             UIUpdate update = new UIUpdate();
             <!-- Ubicaciones_UbicacionMyDesk , ERP_AttributeAbstractMyDesk -->
-             update.add2Menu("b1a580bd-c4a3-4d06-9b98-2e3b62e06254", "9427d507-4793-4751-83e8-f08dbf2df55d", 1);
+            update.add2Menu("b1a580bd-c4a3-4d06-9b98-2e3b62e06254", "9427d507-4793-4751-83e8-f08dbf2df55d", 1);
 
         </script>
     </version>
