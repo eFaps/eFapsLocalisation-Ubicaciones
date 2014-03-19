@@ -136,7 +136,7 @@ public abstract class Ubicaciones_Base
             }
 
             @Override
-            protected DropDownPosition getDropDownPosition(final Parameter _parameter,
+            public DropDownPosition getDropDownPosition(final Parameter _parameter,
                                                            final Object _value,
                                                            final Object _option)
                 throws EFapsException
