@@ -27,7 +27,7 @@
               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
               xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
     <uuid>461bef74-7f6a-42d3-821e-be72ad1aa869</uuid>
-    <bundle name="eFapsLocalizations-Ubicaciones" sequence="0" />
+    <bundle name="eFapsLocalizations-Ubicaciones" sequence="1" />
     <resource>
         <type>Properties</type>
         <language></language>
