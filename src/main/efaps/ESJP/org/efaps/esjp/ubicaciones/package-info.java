@@ -15,22 +15,10 @@
  *
  */
 
-package org.efaps.esjp.ubicaciones;
-
-import org.efaps.admin.program.esjp.EFapsApplication;
-import org.efaps.admin.program.esjp.EFapsUUID;
-
 /**
- * This class must be replaced for customization, therefore it is left empty.
- * Functional description can be found in the related "<code>_base</code>"
- * class.
+ * Base package for Ubicaciones.
  *
  * @author The eFaps Team
  */
-@EFapsUUID("7cda3de1-91d1-41e9-a772-c6b1872b28a8")
-@EFapsApplication("eFapsLocalizations-Ubicaciones")
-public class Ubicaciones
-    extends Ubicaciones_Base
-{
+package org.efaps.esjp.ubicaciones;
 
-}

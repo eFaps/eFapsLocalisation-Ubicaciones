@@ -48,8 +48,8 @@
             </trigger>
             <trigger program="org.efaps.esjp.ubicaciones.Ubicaciones" method="updateDropDown4Ubication"
                 name="Ubicaciones_UbicacionExampleForm.locationUbication.UI_FIELD_UPDATE" event="UI_FIELD_UPDATE">
-                <property name="targetField">locationUbication2</property>
-                <property name="cleanFields">locationUbication3</property>
+                <property name="TargetField">locationUbication2</property>
+                <property name="CleanField">locationUbication3</property>
             </trigger>
         </field>
         <field name="locationUbication2">
@@ -67,7 +67,7 @@
             </trigger>
             <trigger program="org.efaps.esjp.ubicaciones.Ubicaciones" method="updateDropDown4Ubication"
                 name="Contacts_ClassLocationForm.locationUbication2.UI_FIELD_UPDATE" event="UI_FIELD_UPDATE">
-                <property name="targetField">locationUbication3</property>
+                <property name="TargetField">locationUbication3</property>
             </trigger>
         </field>
         <field name="locationUbication3">
@@ -101,8 +101,8 @@
             </trigger>
             <trigger program="org.efaps.esjp.ubicaciones.Ubicaciones" method="updateDropDown4Ubication"
                 name="Ubicaciones_UbicacionExampleForm.locationUbicationEdit.UI_FIELD_UPDATE" event="UI_FIELD_UPDATE">
-                <property name="targetField">locationUbication2Edit</property>
-                <property name="cleanFields">locationUbication3Edit</property>
+                <property name="TargetField">locationUbication2Edit</property>
+                <property name="CleanField">locationUbication3Edit</property>
             </trigger>
         </field>
         <field name="locationUbication2Edit">
@@ -120,7 +120,7 @@
             </trigger>
             <trigger program="org.efaps.esjp.ubicaciones.Ubicaciones" method="updateDropDown4Ubication"
                 name="Contacts_ClassLocationForm.locationUbication2.UI_FIELD_UPDATE" event="UI_FIELD_UPDATE">
-                <property name="targetField">locationUbication3Edit</property>
+                <property name="TargetField">locationUbication3Edit</property>
             </trigger>
         </field>
         <field name="locationUbication3Edit">

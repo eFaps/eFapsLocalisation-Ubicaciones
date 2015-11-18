@@ -1,5 +1,5 @@
 /*
- * Copyright 2003 - 2011 The eFaps Team
+ * Copyright 2003 - 2015 The eFaps Team
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,14 +13,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Revision:        $Rev$
- * Last Changed:    $Date$
- * Last Changed By: $Author$
  */
 
 package org.efaps.esjp.ubicaciones;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -31,7 +29,7 @@ import org.efaps.admin.event.Parameter;
 import org.efaps.admin.event.Parameter.ParameterValues;
 import org.efaps.admin.event.Return;
 import org.efaps.admin.event.Return.ReturnValues;
-import org.efaps.admin.program.esjp.EFapsRevision;
+import org.efaps.admin.program.esjp.EFapsApplication;
 import org.efaps.admin.program.esjp.EFapsUUID;
 import org.efaps.admin.ui.field.Field;
 import org.efaps.db.CachedPrintQuery;
@@ -41,6 +39,9 @@ import org.efaps.db.PrintQuery;
 import org.efaps.db.QueryBuilder;
 import org.efaps.db.SelectBuilder;
 import org.efaps.esjp.ci.CIUbicaciones;
+import org.efaps.esjp.common.AbstractCommon;
+import org.efaps.esjp.common.util.InterfaceUtils;
+import org.efaps.esjp.common.util.InterfaceUtils_Base.DojoLibs;
 import org.efaps.ui.wicket.util.EFapsKey;
 import org.efaps.util.EFapsException;
 
@@ -48,15 +49,14 @@ import org.efaps.util.EFapsException;
  * TODO comment!
  *
  * @author The eFaps Team
- * @version $Id$
  */
 @EFapsUUID("66b65261-371f-4cfc-8260-af1904543c02")
-@EFapsRevision("$Rev$")
+@EFapsApplication("eFapsLocalizations-Ubicaciones")
 public abstract class Ubicaciones_Base
+    extends AbstractCommon
 {
-
-    public static final String CACHEKEY = "org.efaps.esjp.ubicaciones.Ubicaciones.CACHEKEY";
-
+    /** The Constant CACHEKEY. */
+    public static final String CACHEKEY = Ubicaciones.class.getName() +  "CACHEKEY";
 
     /**
      * Method is called with update event only in case the selected item.
@@ -69,7 +69,6 @@ public abstract class Ubicaciones_Base
         throws EFapsException
     {
         final Return ret = new Return();
-        final Map<?, ?> props = (Map<?, ?>) _parameter.get(ParameterValues.PROPERTIES);
         final Field field = (Field) _parameter.get(ParameterValues.UIOBJECT);
         final Long id = Long.parseLong(_parameter.getParameterValue(field.getName()));
         final QueryBuilder queryBldr = new QueryBuilder(CIUbicaciones.UbicacionStandard);
@@ -80,16 +79,12 @@ public abstract class Ubicaciones_Base
         multi.addAttribute(CIUbicaciones.UbicacionStandard.Name);
         multi.execute();
         final StringBuilder js = new StringBuilder();
-        final String target = (String) props.get("targetField");
+        final String target = getProperty(_parameter, "TargetField");
         if (target != null && !target.isEmpty()) {
             js.append("var box; var option;");
-            final String clean = (String) props.get("cleanFields");
-            if (clean != null && !clean.isEmpty()) {
-                final String[] cleanFields = clean.split(";");
-                for (final String fieldName : cleanFields) {
-                    js.append("box = document.getElementsByName(\'").append(fieldName).append("\')[0];")
-                        .append("while ( box.options.length ) box.options[0] = null;");
-                }
+            for (final String fieldName : analyseProperty(_parameter, "CleanField").values()) {
+                js.append("box = document.getElementsByName(\'").append(fieldName).append("\')[0];")
+                    .append("while ( box.options.length ) box.options[0] = null;");
             }
             js.append("box = document.getElementsByName(\'").append(target).append("\')[0];")
                 .append("while ( box.options.length ) box.options[0] = null;")
@@ -98,18 +93,55 @@ public abstract class Ubicaciones_Base
             while (multi.next()) {
                 final String name = multi.<String>getAttribute(CIUbicaciones.UbicacionStandard.Name);
                 js.append("option = new Option(\"").append(StringEscapeUtils.escapeEcmaScript(name)).append("\",")
-                    .append(multi.getCurrentInstance().getId()).append(");").append("box.options[box.length] = option;");
+                    .append(multi.getCurrentInstance().getId()).append(");")
+                    .append("box.options[box.length] = option;");
             }
         }
-
-        final List<Map<String, String>> list = new ArrayList<Map<String, String>>();
-        final Map<String, String> map = new HashMap<String, String>();
-        map.put(EFapsKey.FIELDUPDATE_JAVASCRIPT.getKey(), js.toString());
+        final Collection<String> combineTargets = analyseProperty(_parameter, "CombineTargetField").values();
+        final Collection<String> combineSources = analyseProperty(_parameter, "CombineSourceField").values();
+        if (!combineTargets.isEmpty()) {
+            final StringBuilder js2 = new StringBuilder();
+            for (final String combineTarget : combineTargets) {
+                js2.append("query(\"[name=").append(combineTarget).append("]\").forEach(function(_node1) {\n")
+                    .append("domAttr.set(_node1, 'value', '');\n")
+                    .append("var vA = [");
+                boolean first = true;
+                for (final String combineSource : combineSources) {
+                    if (first) {
+                        first = false;
+                    } else {
+                        js2.append(",");
+                    }
+                    js2.append("'").append(combineSource).append("'");
+                }
+                js2.append("];\n")
+                    .append(" array.forEach(vA, function(item) {\n")
+                    .append("query(\"[name=\" + item + \"]\").forEach(function(_node2) {\n")
+                    .append(" var cv = domAttr.get(_node1, 'value'); \n")
+                    .append("var nv = _node2.selectedOptions[0].label;\n")
+                    .append("domAttr.set(_node1, 'value', cv.length > 0 ? cv  + \" - \" + nv : nv); \n")
+                    .append("});\n")
+                    .append("}); \n")
+                    .append("});\n");
+                }
+            js.append(InterfaceUtils.wrapInDojoRequire(_parameter, js2, DojoLibs.QUERY, DojoLibs.DOMATTR,
+                            DojoLibs.ARRAY));
+        }
+        final List<Map<String, String>> list = new ArrayList<>();
+        final Map<String, String> map = new HashMap<>();
+        map.put(EFapsKey.FIELDUPDATE_JAVASCRIPT.getKey(), js .toString());
         list.add(map);
         ret.put(ReturnValues.VALUES, list);
         return ret;
     }
 
+    /**
+     * Gets the dropdown.
+     *
+     * @param _parameter Parameter as passed by the eFaps API
+     * @return the dropdown
+     * @throws EFapsException on error
+     */
     public Return getDropdown(final Parameter _parameter)
         throws EFapsException
     {
@@ -120,8 +152,7 @@ public abstract class Ubicaciones_Base
                                                  final QueryBuilder _queryBldr)
                 throws EFapsException
             {
-                final Map<?, ?> props = (Map<?, ?>) _parameter.get(ParameterValues.PROPERTIES);
-                final String parentAttr = (String) props.get("ParentAttribute");
+                final String parentAttr = getProperty(_parameter, "ParentAttribute");
 
                 final Instance instance = _parameter.getCallInstance();
                 if (parentAttr != null && !"".equals(parentAttr)) {
@@ -157,12 +188,9 @@ public abstract class Ubicaciones_Base
                         }
                     }
                 }
-
                 return ret;
             }
         };
-
         return field.dropDownFieldValue(_parameter);
     }
-
 }
