@@ -142,7 +142,7 @@
         </field>
         <field name="ubication">
             <property name="Phrase">$&lt;linkto[DepartmentLink].attribute[Name]&gt; - $&lt;linkto[ProvinceLink].attribute[Name]&gt; - $&lt;linkto[DistrictLink].attribute[Name]&gt;</property>
-            <property name="ClassNameUI">org.efaps.admin.datamodel.ui.StringUI</property>
+            <property name="UIProvider">org.efaps.admin.datamodel.ui.StringUI</property>
             <property name="Label">Ubicaciones_UbicacionExampleForm.ubication.Label</property>
             <property name="ModeCreate">NONE</property>
             <property name="ModeEdit">NONE</property>
