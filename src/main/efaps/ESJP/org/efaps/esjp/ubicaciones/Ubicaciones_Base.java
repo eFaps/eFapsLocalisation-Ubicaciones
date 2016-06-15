@@ -24,7 +24,7 @@ import java.util.List;
 import java.util.Map;
 
 import org.apache.commons.lang3.StringEscapeUtils;
-import org.efaps.admin.datamodel.ui.FieldValue;
+import org.efaps.admin.datamodel.ui.IUIValue;
 import org.efaps.admin.event.Parameter;
 import org.efaps.admin.event.Parameter.ParameterValues;
 import org.efaps.admin.event.Return;
@@ -174,12 +174,12 @@ public abstract class Ubicaciones_Base
             {
                 final DropDownPosition ret = super.getDropDownPosition(_parameter, _value, _option);
 
-                final FieldValue fieldValue = (FieldValue) _parameter.get(ParameterValues.UIOBJECT);
+                final IUIValue uiValue = (IUIValue) _parameter.get(ParameterValues.UIOBJECT);
                 final Instance instance = _parameter.getCallInstance();
-                if (fieldValue != null) {
+                if (uiValue != null) {
                     final PrintQuery print = new CachedPrintQuery(instance, Ubicaciones_Base.CACHEKEY);
                     final SelectBuilder selID = new SelectBuilder()
-                                                        .linkto(fieldValue.getAttribute().getName()).attribute("ID");
+                                                        .linkto(uiValue.getAttribute().getName()).attribute("ID");
                     print.addSelect(selID);
                     if (print.execute()) {
                         final Long id = print.<Long>getSelect(selID);
