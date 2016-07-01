@@ -191,6 +191,6 @@ public abstract class Ubicaciones_Base
                 return ret;
             }
         };
-        return field.dropDownFieldValue(_parameter);
+        return field.getOptionListFieldValue(_parameter);
     }
 }
