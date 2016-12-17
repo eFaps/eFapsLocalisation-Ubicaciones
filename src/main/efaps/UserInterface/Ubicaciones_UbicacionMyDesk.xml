@@ -38,7 +38,7 @@
             <menu>Ubicaciones_UbicacionMyDesk_Menu</menu>
             <table>Ubicaciones_UbicacionAbstractTable</table>
             <evaluate program="org.efaps.esjp.common.uitable.MultiPrint">
-                <property name="Types">Ubicaciones_UbicacionStandardRoot</property>
+                <property name="Type">Ubicaciones_UbicacionStandardRoot</property>
             </evaluate>
         </target>
         <!-- properties -->

@@ -36,8 +36,8 @@
             <menu>Ubicaciones_UbicacionTree_Childs_Menu</menu>
             <table>Ubicaciones_UbicacionAbstractTable</table>
             <evaluate program="org.efaps.esjp.common.uitable.MultiPrint">
-                <property name="Types">Ubicaciones_UbicacionAbstract</property>
-                <property name="LinkFroms">ParentLink</property>
+                <property name="Type">Ubicaciones_UbicacionAbstract</property>
+                <property name="LinkFrom">ParentLink</property>
                 <property name="ExpandChildTypes">true</property>
             </evaluate>
         </target>
