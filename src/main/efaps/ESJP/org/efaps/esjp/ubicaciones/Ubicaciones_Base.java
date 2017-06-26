@@ -23,7 +23,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.apache.commons.lang3.ArrayUtils;
 import org.apache.commons.lang3.StringEscapeUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.efaps.admin.datamodel.ui.IUIValue;
 import org.efaps.admin.event.Parameter;
 import org.efaps.admin.event.Parameter.ParameterValues;
@@ -34,6 +36,7 @@ import org.efaps.admin.program.esjp.EFapsUUID;
 import org.efaps.admin.ui.field.Field;
 import org.efaps.db.CachedPrintQuery;
 import org.efaps.db.Instance;
+import org.efaps.db.InstanceQuery;
 import org.efaps.db.MultiPrintQuery;
 import org.efaps.db.PrintQuery;
 import org.efaps.db.QueryBuilder;
@@ -42,6 +45,7 @@ import org.efaps.esjp.ci.CIUbicaciones;
 import org.efaps.esjp.common.AbstractCommon;
 import org.efaps.esjp.common.util.InterfaceUtils;
 import org.efaps.esjp.common.util.InterfaceUtils_Base.DojoLibs;
+import org.efaps.esjp.db.InstanceUtils;
 import org.efaps.ui.wicket.util.EFapsKey;
 import org.efaps.util.EFapsException;
 
@@ -192,5 +196,71 @@ public abstract class Ubicaciones_Base
             }
         };
         return field.getOptionListFieldValue(_parameter);
+    }
+
+    /**
+     * Gets the address label.
+     *
+     * @param _parameter Parameter as passed by the eFaps API
+     * @param _code the code
+     * @return the address label
+     * @throws EFapsException on error
+     */
+    public CharSequence getAddressLabel(final Parameter _parameter,
+                                        final String _code)
+        throws EFapsException
+    {
+        CharSequence ret = new StringBuilder();
+        final QueryBuilder queryBuilder = new QueryBuilder(CIUbicaciones.UbicacionAbstract);
+        queryBuilder.addWhereAttrEqValue(CIUbicaciones.UbicacionAbstract.Code, _code);
+        final InstanceQuery query = queryBuilder.getQuery();
+        query.execute();
+        if (query.next()) {
+            ret = getAddressLabel(_parameter, query.getCurrentValue());
+        }
+        return ret;
+    }
+
+    /**
+     * Gets the address label.
+     *
+     * @param _parameter Parameter as passed by the eFaps API
+     * @param _instance the instance
+     * @return the address label
+     * @throws EFapsException on error
+     */
+    public CharSequence getAddressLabel(final Parameter _parameter,
+                                        final Instance _instance)
+        throws EFapsException
+    {
+        final String[] names = getNames(_parameter, _instance);
+        ArrayUtils.reverse(names);
+        return StringUtils.join(names, " - ");
+    }
+
+    /**
+     * Gets the names.
+     *
+     * @param _parameter Parameter as passed by the eFaps API
+     * @param _instance the instance
+     * @return the names
+     * @throws EFapsException on error
+     */
+    protected String[] getNames(final Parameter _parameter,
+                                final Instance _instance)
+        throws EFapsException
+    {
+        final PrintQuery print = new PrintQuery(_instance);
+        final SelectBuilder selParentInst = SelectBuilder.get().linkto(CIUbicaciones.UbicacionAbstract.ParentLink)
+                        .instance();
+        print.addSelect(selParentInst);
+        print.addAttribute(CIUbicaciones.UbicacionAbstract.Name);
+        print.execute();
+        final Instance parentInst = print.getSelect(selParentInst);
+        String[] ret = new String[] { print.getAttribute(CIUbicaciones.UbicacionAbstract.Name) };
+        if (InstanceUtils.isValid(parentInst)) {
+            ret = ArrayUtils.addAll(ret, getNames(_parameter, parentInst));
+        }
+        return ret;
     }
 }
