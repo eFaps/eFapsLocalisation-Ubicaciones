@@ -44,7 +44,6 @@ import org.efaps.esjp.common.AbstractCommon;
 import org.efaps.esjp.common.util.InterfaceUtils;
 import org.efaps.esjp.common.util.InterfaceUtils_Base.DojoLibs;
 import org.efaps.esjp.db.InstanceUtils;
-import org.efaps.ui.wicket.util.EFapsKey;
 import org.efaps.util.EFapsException;
 
 /**
@@ -131,7 +130,7 @@ public abstract class Ubicaciones_Base
         }
         final List<Map<String, String>> list = new ArrayList<>();
         final Map<String, String> map = new HashMap<>();
-        map.put(EFapsKey.FIELDUPDATE_JAVASCRIPT.getKey(), js .toString());
+        map.put("eFapsFieldUpdateJS", js .toString());
         list.add(map);
         ret.put(ReturnValues.VALUES, list);
         return ret;
