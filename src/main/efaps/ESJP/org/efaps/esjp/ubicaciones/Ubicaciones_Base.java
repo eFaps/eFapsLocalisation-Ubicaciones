@@ -39,11 +39,14 @@ import org.efaps.db.MultiPrintQuery;
 import org.efaps.db.PrintQuery;
 import org.efaps.db.QueryBuilder;
 import org.efaps.db.SelectBuilder;
+import org.efaps.eql.EQL;
 import org.efaps.esjp.ci.CIUbicaciones;
 import org.efaps.esjp.common.AbstractCommon;
 import org.efaps.esjp.common.util.InterfaceUtils;
 import org.efaps.esjp.common.util.InterfaceUtils_Base.DojoLibs;
 import org.efaps.esjp.db.InstanceUtils;
+import org.efaps.esjp.ui.rest.dto.OptionDto;
+import org.efaps.esjp.ui.rest.dto.ValueDto;
 import org.efaps.util.EFapsException;
 
 /**
@@ -56,8 +59,9 @@ import org.efaps.util.EFapsException;
 public abstract class Ubicaciones_Base
     extends AbstractCommon
 {
+
     /** The Constant CACHEKEY. */
-    public static final String CACHEKEY = Ubicaciones.class.getName() +  "CACHEKEY";
+    public static final String CACHEKEY = Ubicaciones.class.getName() + "CACHEKEY";
 
     /**
      * Method is called with update event only in case the selected item.
@@ -70,70 +74,144 @@ public abstract class Ubicaciones_Base
         throws EFapsException
     {
         final Return ret = new Return();
-        final Field field = (Field) _parameter.get(ParameterValues.UIOBJECT);
-        final Long id = Long.parseLong(_parameter.getParameterValue(field.getName()));
-        final QueryBuilder queryBldr = new QueryBuilder(CIUbicaciones.UbicacionStandard);
-        queryBldr.addWhereAttrEqValue(CIUbicaciones.UbicacionStandard.ParentLink, id);
-        queryBldr.addOrderByAttributeAsc(CIUbicaciones.UbicacionStandard.Name);
-        final MultiPrintQuery multi = queryBldr.getCachedPrint(Ubicaciones_Base.CACHEKEY);
-        multi.setEnforceSorted(true);
-        multi.addAttribute(CIUbicaciones.UbicacionStandard.Name);
-        multi.execute();
-        final StringBuilder js = new StringBuilder();
-        final String target = getProperty(_parameter, "TargetField");
-        if (target != null && !target.isEmpty()) {
-            js.append("var box; var option;");
-            for (final String fieldName : analyseProperty(_parameter, "CleanField").values()) {
-                js.append("box = document.getElementsByName(\'").append(fieldName).append("\')[0];")
-                    .append("while ( box.options.length ) box.options[0] = null;");
+        if (isRest()) {
+            final var fieldName = ((Field) _parameter.get(ParameterValues.UIOBJECT)).getName();
+            final boolean editMode = fieldName.endsWith("Edit");
+            @SuppressWarnings("unchecked") final Map<String, Object> payload = (Map<String, Object>) _parameter
+                            .get(ParameterValues.PAYLOAD);
+
+            final var parentId = (Number) payload.get(fieldName);
+
+            final var eval = EQL.builder().print()
+                            .query(CIUbicaciones.UbicacionStandard)
+                            .where()
+                            .attribute(CIUbicaciones.UbicacionStandard.ParentLink).eq(parentId)
+                            .select()
+                            .attribute(CIUbicaciones.UbicacionStandard.Name)
+                            .orderBy(CIUbicaciones.UbicacionStandard.Name)
+                            .evaluate();
+            final var options = new ArrayList<OptionDto>();
+            while (eval.next()) {
+                options.add(OptionDto.builder()
+                                .withValue(eval.inst().getId())
+                                .withLabel(eval.get(CIUbicaciones.UbicacionStandard.Name))
+                                .build());
             }
-            js.append("box = document.getElementsByName(\'").append(target).append("\')[0];")
-                .append("while ( box.options.length ) box.options[0] = null;")
-                .append("option = new Option(\"").append(StringEscapeUtils.escapeEcmaScript("-")).append("\",")
-                .append(0).append(");").append("box.options[box.length] = option;");
-            while (multi.next()) {
-                final String name = multi.<String>getAttribute(CIUbicaciones.UbicacionStandard.Name);
-                js.append("option = new Option(\"").append(StringEscapeUtils.escapeEcmaScript(name)).append("\",")
-                    .append(multi.getCurrentInstance().getId()).append(");")
-                    .append("box.options[box.length] = option;");
+            final List<Map<String, Object>> list = new ArrayList<>();
+            final Map<String, Object> map = new HashMap<>();
+            list.add(map);
+            ret.put(ReturnValues.VALUES, list);
+            switch (fieldName) {
+                case "departmentLocation", "departmentLocationEdit": {
+                    map.put(editMode ? "provinceLocationEdit" : "provinceLocation",
+                                    ValueDto.builder().withOptions(options).withValue(null).build());
+                    map.put(editMode ? "districtLocationEdit" : "districtLocation",
+                                    ValueDto.builder().withOptions(new ArrayList<>()).withValue(null).build());
+
+                }
+                case "provinceLocation", "provinceLocationEdit": {
+                    map.put(editMode ? "districtLocationEdit" : "districtLocation",
+                                    ValueDto.builder().withOptions(options).withValue(null).build());
+                }
+                default:
+                    // do nothing
             }
-        }
-        final Collection<String> combineTargets = analyseProperty(_parameter, "CombineTargetField").values();
-        final Collection<String> combineSources = analyseProperty(_parameter, "CombineSourceField").values();
-        if (!combineTargets.isEmpty()) {
-            final StringBuilder js2 = new StringBuilder();
-            for (final String combineTarget : combineTargets) {
-                js2.append("query(\"[name=").append(combineTarget).append("]\").forEach(function(_node1) {\n")
-                    .append("domAttr.set(_node1, 'value', '');\n")
-                    .append("var vA = [");
-                boolean first = true;
-                for (final String combineSource : combineSources) {
-                    if (first) {
-                        first = false;
-                    } else {
-                        js2.append(",");
+
+            final var departmentLocationId = (Number) payload
+                            .get(editMode ? "departmentLocationEdit" : "departmentLocation");
+            final var provinceLocationId = (Number) payload.get(editMode ? "provinceLocationEdit" : "provinceLocation");
+            final var districtLocationId = (Number) payload.get(editMode ? "districtLocationEdit" : "districtLocation");
+
+            final var locationAdressCity = String.format("%s - %s - %s", getNameById(departmentLocationId),
+                            getNameById(provinceLocationId), getNameById(districtLocationId));
+            map.put("locationAdressCity", locationAdressCity);
+
+        } else {
+            final Field field = (Field) _parameter.get(ParameterValues.UIOBJECT);
+            final Long id = Long.parseLong(_parameter.getParameterValue(field.getName()));
+            final QueryBuilder queryBldr = new QueryBuilder(CIUbicaciones.UbicacionStandard);
+            queryBldr.addWhereAttrEqValue(CIUbicaciones.UbicacionStandard.ParentLink, id);
+            queryBldr.addOrderByAttributeAsc(CIUbicaciones.UbicacionStandard.Name);
+            final MultiPrintQuery multi = queryBldr.getCachedPrint(Ubicaciones_Base.CACHEKEY);
+            multi.setEnforceSorted(true);
+            multi.addAttribute(CIUbicaciones.UbicacionStandard.Name);
+            multi.execute();
+            final StringBuilder js = new StringBuilder();
+            final String target = getProperty(_parameter, "TargetField");
+            if (target != null && !target.isEmpty()) {
+                js.append("var box; var option;");
+                for (final String fieldName : analyseProperty(_parameter, "CleanField").values()) {
+                    js.append("box = document.getElementsByName(\'").append(fieldName).append("\')[0];")
+                                    .append("while ( box.options.length ) box.options[0] = null;");
+                }
+                js.append("box = document.getElementsByName(\'").append(target).append("\')[0];")
+                                .append("while ( box.options.length ) box.options[0] = null;")
+                                .append("option = new Option(\"").append(StringEscapeUtils.escapeEcmaScript("-"))
+                                .append("\",")
+                                .append(0).append(");").append("box.options[box.length] = option;");
+                while (multi.next()) {
+                    final String name = multi.<String>getAttribute(CIUbicaciones.UbicacionStandard.Name);
+                    js.append("option = new Option(\"").append(StringEscapeUtils.escapeEcmaScript(name)).append("\",")
+                                    .append(multi.getCurrentInstance().getId()).append(");")
+                                    .append("box.options[box.length] = option;");
+                }
+            }
+            final Collection<String> combineTargets = analyseProperty(_parameter, "CombineTargetField").values();
+            final Collection<String> combineSources = analyseProperty(_parameter, "CombineSourceField").values();
+            if (!combineTargets.isEmpty()) {
+                final StringBuilder js2 = new StringBuilder();
+                for (final String combineTarget : combineTargets) {
+                    js2.append("query(\"[name=").append(combineTarget).append("]\").forEach(function(_node1) {\n")
+                                    .append("domAttr.set(_node1, 'value', '');\n")
+                                    .append("var vA = [");
+                    boolean first = true;
+                    for (final String combineSource : combineSources) {
+                        if (first) {
+                            first = false;
+                        } else {
+                            js2.append(",");
+                        }
+                        js2.append("'").append(combineSource).append("'");
                     }
-                    js2.append("'").append(combineSource).append("'");
+                    js2.append("];\n")
+                                    .append(" array.forEach(vA, function(item) {\n")
+                                    .append("query(\"[name=\" + item + \"]\").forEach(function(_node2) {\n")
+                                    .append(" var cv = domAttr.get(_node1, 'value'); \n")
+                                    .append("var nv = _node2.selectedOptions[0].label;\n")
+                                    .append("domAttr.set(_node1, 'value', cv.length > 0 ? cv  + \" - \" + nv : nv); \n")
+                                    .append("});\n")
+                                    .append("}); \n")
+                                    .append("});\n");
                 }
-                js2.append("];\n")
-                    .append(" array.forEach(vA, function(item) {\n")
-                    .append("query(\"[name=\" + item + \"]\").forEach(function(_node2) {\n")
-                    .append(" var cv = domAttr.get(_node1, 'value'); \n")
-                    .append("var nv = _node2.selectedOptions[0].label;\n")
-                    .append("domAttr.set(_node1, 'value', cv.length > 0 ? cv  + \" - \" + nv : nv); \n")
-                    .append("});\n")
-                    .append("}); \n")
-                    .append("});\n");
-                }
-            js.append(InterfaceUtils.wrapInDojoRequire(_parameter, js2, DojoLibs.QUERY, DojoLibs.DOMATTR,
-                            DojoLibs.ARRAY));
+                js.append(InterfaceUtils.wrapInDojoRequire(_parameter, js2, DojoLibs.QUERY, DojoLibs.DOMATTR,
+                                DojoLibs.ARRAY));
+            }
+            final List<Map<String, String>> list = new ArrayList<>();
+            final Map<String, String> map = new HashMap<>();
+            map.put("eFapsFieldUpdateJS", js.toString());
+            list.add(map);
+            ret.put(ReturnValues.VALUES, list);
         }
-        final List<Map<String, String>> list = new ArrayList<>();
-        final Map<String, String> map = new HashMap<>();
-        map.put("eFapsFieldUpdateJS", js .toString());
-        list.add(map);
-        ret.put(ReturnValues.VALUES, list);
         return ret;
+    }
+
+    protected String getNameById(Number id)
+        throws EFapsException
+    {
+        String name = "";
+        if (id != null) {
+            final var eval = EQL.builder().print()
+                            .query(CIUbicaciones.UbicacionAbstract)
+                            .where()
+                            .attribute(CIUbicaciones.UbicacionAbstract.ID).eq(id)
+                            .select()
+                            .attribute(CIUbicaciones.UbicacionAbstract.Name)
+                            .evaluate();
+            if (eval.next()) {
+                name = eval.get(CIUbicaciones.UbicacionAbstract.Name);
+            }
+        }
+        return name;
     }
 
     /**
@@ -146,7 +224,8 @@ public abstract class Ubicaciones_Base
     public Return getDropdown(final Parameter _parameter)
         throws EFapsException
     {
-        final org.efaps.esjp.common.uiform.Field field = new org.efaps.esjp.common.uiform.Field() {
+        final org.efaps.esjp.common.uiform.Field field = new org.efaps.esjp.common.uiform.Field()
+        {
 
             @Override
             protected void add2QueryBuilder4List(final Parameter _parameter,
@@ -169,8 +248,8 @@ public abstract class Ubicaciones_Base
 
             @Override
             public DropDownPosition getDropDownPosition(final Parameter _parameter,
-                                                           final Object _value,
-                                                           final Object _option)
+                                                        final Object _value,
+                                                        final Object _option)
                 throws EFapsException
             {
                 final DropDownPosition ret = super.getDropDownPosition(_parameter, _value, _option);
@@ -180,7 +259,7 @@ public abstract class Ubicaciones_Base
                 if (uiValue != null) {
                     final PrintQuery print = new CachedPrintQuery(instance, Ubicaciones_Base.CACHEKEY);
                     final SelectBuilder selID = new SelectBuilder()
-                                                        .linkto(uiValue.getAttribute().getName()).attribute("ID");
+                                    .linkto(uiValue.getAttribute().getName()).attribute("ID");
                     print.addSelect(selID);
                     if (print.execute()) {
                         final Long id = print.<Long>getSelect(selID);
